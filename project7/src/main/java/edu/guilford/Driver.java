@@ -97,6 +97,27 @@ public class Driver {
 
         // Write data
         dataWriter2B.writeData("ANALYZED_sm_thesis.txt");
-        System.out.println("");
+        System.out.println("-------------------------");
+        System.out.println("Example 3: User Data Searching\n");
+        System.out.println("Enter words to search for frequency data from the Bee Movie Script!\n");
+
+        // User searches for analytic DataPoints from the Bee Movie Script
+        while (true) {
+            System.out.print("Enter search word: ");
+            String searchWord = scanner.nextLine();
+            boolean found = false;
+            for (DataPoint dataPoint : processor.getWordFrequencyData()) {
+                if (searchWord.equals(dataPoint.getStringElement())) {
+                    System.out.println(dataPoint.toString());
+                    found = true;
+                    break;
+                }
+            }
+            
+            if (!found) {
+                System.out.println(searchWord + " not found.");
+            }
+        }
+
     }
 }
