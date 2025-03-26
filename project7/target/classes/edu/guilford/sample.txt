@@ -1,0 +1,63 @@
+Project 7 - Text Analysis
+-------------------------
+Example 1: Bee Movie Script
+
+Hit Enter to Read Data:
+
+24b
+...
+yowser
+
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\CLEANED_Bee_Movie_Script.txt     
+
+Hit Enter to Read Analytics:
+
+you 275
+...
+yowser 1
+
+
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\ANALYZED_Bee_Movie_Script.txt    
+-------------------------
+Example 2: A Thesis I think?
+
+Hit Enter to Read Data:
+
+112d21
+...
+zulkarnain
+
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\CLEANED_sm_thesis.txt
+
+Hit Enter to Read Analytics:
+
+the 1258
+...
+zulkarnain 1
+
+
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\ANALYZED_sm_thesis.txt
+-------------------------
+Example 3: User Data Searching
+
+Enter words to search for frequency data from the Bee Movie Script!
+
+Enter search word (hit Enter to quit): you
+you 275
+Enter search word (hit Enter to quit): the
+the 259
+Enter search word (hit Enter to quit): potato
+potato not found.
+Enter search word (hit Enter to quit):
+-------------------------
+Additional File Processing
+
+Enter additional file name to be processed (hit Enter to quit):
+qm_buddhist.txt
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\CLEANED_qm_buddhist.txt
+Data successfully written to C:\Users\micha\OneDrive\Documents\GitHub\CTIS310-Project_7\project7\src\main\java\edu\guilford\output\ANALYZED_qm_buddhist.txt
+Processing complete for file: qm_buddhist.txt
+Enter another file name to be processed (hit Enter to quit):
+fakefile.txt
+File not found: fakefile.txt
+Enter another file name to be processed (hit Enter to quit):
