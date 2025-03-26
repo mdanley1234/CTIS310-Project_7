@@ -1,0 +1,3006 @@
+Imperial College London
+Department of Civil and Environmental Engineering
+
+Title
+Simon Moulds
+Month Year
+
+Submitted in part fulfilment of the requirements for the degree of
+Doctor of Philosophy in Civil and Environmental Engineering of Imperial
+College London
+and the Diploma of Imperial College London
+
+1
+
+Abstract
+“In publishing and graphic design, lorem ipsum (or simply lipsum) is standard placeholder text used to demonstrate the graphic elements of a document or visual presentation, such as font, typography, and layout. Lipsum
+also serves as placeholder text in mock-ups of visual design projects before
+the actual words are inserted into the finished product. When used in this
+manner, lipsum is also called greeking.
+Even though using ‘lorem ipsum’ often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning. Where text
+is visible in a document, people tend to focus on the textual content rather
+than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design in order to direct the focus to presentation. ‘Lorem
+ipsum’ also approximates a typical distribution of letters in English, which
+helps to shift the focus to presentation.
+The most common lorem ipsum text reads as follows: Lorem ipsum dolor
+sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+in culpa qui officia deserunt mollit anim id est laborum.”
+— Wikipedia
+
+2
+
+Contents
+1 Introduction
+
+8
+
+1.0.1
+
+Aim . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+9
+
+1.0.2
+
+Objectives . . . . . . . . . . . . . . . . . . . . . . . . .
+
+9
+
+1.0.3
+
+Structure of thesis . . . . . . . . . . . . . . . . . . . . 10
+
+2 Land use change modelling
+
+11
+
+2.1
+
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+2.2
+
+Design goals . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+2.3
+
+Software description . . . . . . . . . . . . . . . . . . . . . . . 16
+2.3.1
+
+Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+2.3.2
+
+Data processing . . . . . . . . . . . . . . . . . . . . . . 17
+
+2.3.3
+
+Predictive modelling . . . . . . . . . . . . . . . . . . . 19
+
+2.3.4
+
+Demand . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+2.3.5
+
+Allocation . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+2.3.6
+
+Pattern validation . . . . . . . . . . . . . . . . . . . . 28
+
+2.4
+
+Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+2.5
+
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+
+3 Land cover change in India
+
+42
+
+3.1
+
+Literature review . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+3.2
+
+Mapping land cover . . . . . . . . . . . . . . . . . . . . . . . . 42
+3.2.1
+
+Global land cover products . . . . . . . . . . . . . . . 43
+
+4 India irrigation
+
+46
+
+5 Hydrometeorological feedbacks in Northern India
+
+47
+
+5.1
+
+Literature review . . . . . . . . . . . . . . . . . . . . . . . . . 48
+5.1.1
+
+Surface energy and water balances . . . . . . . . . . . 48
+
+5.1.2
+
+Soil moisture feedbacks . . . . . . . . . . . . . . . . . 50
+
+5.1.3
+
+Role of vegetation in soil moisture feedbacks . . . . . . 52
+
+3
+
+5.1.4
+
+Assessing the impact of the land surface on the South
+Asian monsoon . . . . . . . . . . . . . . . . . . . . . . 53
+
+5.1.5
+5.2
+
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . 56
+
+Materials and methods . . . . . . . . . . . . . . . . . . . . . . 58
+5.2.1
+
+Study region . . . . . . . . . . . . . . . . . . . . . . . 58
+
+5.2.2
+
+JULES . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+5.2.3
+
+Input data . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+5.2.4
+
+Procedure . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+5.3
+
+Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+5.4
+
+Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+
+5.5
+
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+
+6 Model coupling
+6.1
+
+60
+
+Literature review . . . . . . . . . . . . . . . . . . . . . . . . . 60
+6.1.1
+
+The R system . . . . . . . . . . . . . . . . . . . . . . . 67
+
+6.1.2
+
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+6.2
+
+Design goals . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+6.3
+
+Controlled vocabulary . . . . . . . . . . . . . . . . . . . . . . 69
+
+6.4
+
+Object-oriented programming . . . . . . . . . . . . . . . . . . 69
+
+6.5
+
+Classes and methods for hydrological data . . . . . . . . . . . 70
+
+6.6
+
+6.5.1
+
+Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+
+6.5.2
+
+Methods . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+6.5.3
+
+Querying . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+6.5.4
+
+Visualisation . . . . . . . . . . . . . . . . . . . . . . . 74
+
+Example applications . . . . . . . . . . . . . . . . . . . . . . . 74
+6.6.1
+
+Plynlimon . . . . . . . . . . . . . . . . . . . . . . . . . 74
+
+6.6.2
+
+Topmodel . . . . . . . . . . . . . . . . . . . . . . . . . 75
+
+6.6.3
+
+Reservoir operation . . . . . . . . . . . . . . . . . . . . 76
+
+6.7
+
+Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+6.8
+
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+
+7 Conclusion
+
+79
+
+4
+
+List of Tables
+2.1
+
+Functions included in the lulcc package . . . . . . . . . . . . 37
+
+5
+
+List of Figures
+2.1
+
+Diagram showing the general methodology used for inductive
+land use change modelling applications, adapted from Mas
+et al. (2014). The input land use/land cover data can be
+a single categorical map showing the pattern of land use/land
+cover at one time point (LULC (t1)) or a series of maps showing historical land use/land cover transitions (LULCC (t1-t0)). 35
+
+2.2
+
+Class diagram in the Unified Modeling Language (UML) for
+lulcc, showing the main classes and methods included in the
+package. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+2.3
+
+Observed land use maps for the Plum Island Ecosystems site
+in 1985, 1991 and 1999, created by plotting the ObsLulcRasterStack object representing the data. . . . . . . . . . . . . . 38
+
+2.4
+
+Suitability of pixels in the Plum Island Ecosystems study site
+to belong to Forest, Built and Other land use classes according
+to binary logistic regression models. Elevation and slope are
+used as explanatory variables for all land uses while Built
+additionally includes distance to built pixels in 1985. . . . . . 38
+
+2.5
+
+ROC curves showing the ability of each type of predictive
+model to simulate the observed pattern of land use in the
+Plum Island Ecosystems site in 1985 in the data partition left
+out of the fitting procedure. . . . . . . . . . . . . . . . . . . . 39
+
+2.6
+
+ROC curve showing the ability of the binary logistic regression
+model fitted on observed land use data from 1985 to predict
+the gain in Built land between 1985 and 1991. . . . . . . . . . 39
+
+6
+
+2.7
+
+Agreement budget for the transition from Forest to Built for
+the two model outputs considering reference maps at 1985
+and 1999 and simulated map for 1999. The plot shows the
+amount of correctly allocated change increases as the map
+resolution coarsens. . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+2.8
+
+Figure of merit scores corresponding to the agreement budgets
+depicted in Figure 2.7. . . . . . . . . . . . . . . . . . . . . . . 41
+
+5.1
+
+Conceptual diagram of different evapotranspiration regimes . 51
+
+5.2
+
+Soil moisture-atmosphere feedback mechanisms . . . . . . . . 52
+
+7
+
+1 Introduction
+Over recent decades the green revolution in India has driven substantial
+environmental change. While the revolution means that India is now self
+sufficient in food grains (Singh, 2000), there has been widespread land cover
+change and a marked increase in the exploitation of water resources for irrigation (Roy et al., 2007). Scott and Sharma (2009) observe that irrigation
+from groundwater extraction represents more than half of the total irrigated
+area in India, while a survey carried out by Shah et al. (2006) estimates that
+in north west India, which contains a large proportion of the fertile Gangetic
+plains, more than 90% of the cultivated land is irrigated, of which about 90%
+is supplied from groundwater. In addition to agricultural use, groundwater
+resources supply a large proportion of domestic and industrial water demand
+(?). Regional water demand has caused a gradual depletion of groundwater
+resources in several locations (Rodell et al., 2009). The pressure on water
+resources in India, already severe, is likely to increase with forecasted population growth together with continued economic progress. Further, ? showed
+that, while climate change has not affected mean rainfall, the frequency of
+heavy rain days has increased while the frequency of light and moderate
+rain days has decreased. This is consistent with the hypothesis that climate
+change will cause precipitation in the tropics to become more extreme (?).
+Water resources in northern India are dominated by large scale aquifers
+(?). Variations in recharge due to land cover change and changing irrigation
+practices, combined with increasing intensification of groundwater extractions, may affect water resources in complex ways. In addition, there is evidence of strong feedbacks between soil moisture and precipitation in the region (e.g. ??Niyogi et al., 2010). This arises because soil moisture at the land
+surface affects the partitioning of latent and sensible heat and surface albedo
+?. Modelling carried out by ? identified the link between soil moisture and
+the strength of the Asian summer monsoon. The Global Land-Atmosphere
+
+8
+
+Coupling Experiment (GLACE) (?Koster et al., 2006; Guo et al., 2006) provided further evidence of soil moisture-precipitation coupling and identified
+northern India as one of three global "hot spots" where the soil moisture
+feedback is especially pronounced due to the sensitivity of evapotranspiration to soil moisture, rather than the available solar radiation, combined
+with the high variability of evapotranspiration over time.
+A review by Seneviratne et al. (2010) highlighted that, while multimodel
+experiments such as GLACE succeed in identifying basic feedback mechanisms, there is wide range of sensitivity of climate to soil moisture between
+different climate models. Pitman et al. (2009) observed that different assumptions about the physical characteristics of land cover types made by
+climate models, in terms of the representation of albedo, evapotranspiration
+and crop phenology, causes model results to differ markedly. Consequently,
+the impact of land cover change on water resources and fluxes in northern
+India is highly uncertain. One major source of uncertainty emanates from
+the lack of a common land cover change dataset to force climate models
+(Pitman et al., 2009). Additional uncertainty arises by the different land
+surface parameterisations implemented by different climate models, which
+is made worse by the fact that these models cannot be calibrated to local
+conditions. Seneviratne et al. (2010) suggests that this problem could be
+overcome by using the output of offline, high resolution, physically based
+land surface models, calibrated using local observed data, to force global
+climate models. Finally, there is a lack of observations of key hydrological
+variables to calibrate and verify models.
+
+1.0.1 Aim
+The aim of the thesis is to develop tools and methods that improve the quantification... of large-scale environmental change on regional water resources
+and climate.
+
+1.0.2 Objectives
+To achieve the stated aim the following objectives will be pursued
+1. To develop land use change modelling software...
+
+9
+
+2. To develop a regional dataset of land cover and land use change across
+India
+3. To develop software to facilitate complex workflows...
+
+1.0.3 Structure of thesis
+TODO
+
+10
+
+2 Land use change modelling
+This chapter describes the development of a software package, written in R,
+for land use change modelling.
+
+11
+
+2.1 Introduction
+Spatially explicit land use change models are used to understand and quantify key processes that affect land use and land cover change and simulate
+past and future change (Veldkamp and Lambin, 2001; Mas et al., 2014).
+These models are commonly implemented in compiled languages such as
+C/C++ and Fortran and distributed as software packages or extensions to
+proprietary geographic information systems such as ArcGIS or IDRISI. As
+Rosa et al. (2014) points out, it is uncommon for the source code of land use
+change modelling software to be made available (e.g. Verburg et al., 2002;
+Soares-Filho et al., 2002; Verburg and Overmars, 2009; Schaldach et al.,
+2011). While it is true that the concepts and algorithms implemented by
+the software are normally described in scientific journal articles, this fails
+to ensure the reproducibility of scientific results (Peng, 2011; Morin et al.,
+2012), even in the hypothetical case of a perfectly described model (Ince
+et al., 2012). In addition, running binary versions of software makes it difficult to detect silent faults (faults that change the model output without
+obvious signals), whereas these are more likely to be identified if the source
+code is open (Cai et al., 2012). Moreover, it forces duplication of work and
+makes it difficult for members of the scientific community to improve the
+code or adapt it for their own purposes (Morin et al., 2012; Pebesma, 2012;
+Steiniger and Hunter, 2013). In this paper we describe the development of
+lulcc, a new R package designed to foster an open approach to land use
+change science.
+Current software packages for land use change modelling usually exist as
+specialised applications that implement one algorithm. Indeed, it is common for applications to perform only one part of the modelling process. For
+example, the Change in Land Use and it Effects at Small regional extent
+(CLUE-S) software only performs spatial allocation, requiring the user to
+prepare model input and conduct the statistical analysis upon which the
+allocation procedure depends elsewhere (Verburg et al., 2002). This is time
+consuming and increases the likelihood of user errors because inputs to the
+various modelling stages must be transferred manually between applications.
+Furthermore, very few programs include methods to validate model output,
+which could be one reason for the lack of proper validation of models in
+
+12
+
+the literature, as noted by Rosa et al. (2014). The lack of a common interface amongst land use change models is problematic for the community
+because there is widespread uncertainty about the appropriate model form
+and structure for modelling applications (Verburg et al., 2013). Under these
+circumstances it is useful to experiment with various models to identify the
+model that performs best in terms of calibration and validation (Schmitz
+et al., 2009). Alternatatively, ensemble modelling may be used to understand the impact of structural uncertainty on model outcomes (Knutti and
+Sedláček, 2012). However, while some land use change model comparison
+studies have been carried out (e.g Pérez-Vega et al., 2012; Mas et al., 2014;
+Rosa et al., 2014), fundamental differences between models in terms of scale,
+resolution and model inputs prevent the widespread use of ensemble land use
+change predictions (Rosa et al., 2014). As a result, the uncertainty associated with model outcomes is rarely communicated in a formal way, raising
+questions about the utility of such models (Pontius and Spencer, 2005).
+An alternative approach is to develop frameworks that allow several modelling approaches to be implemented within the same environment. One
+such application is PCRaster, a free and open source GIS that includes additional capabilities for spatially explicit dynamic modelling (Schmitz et al.,
+2009). The PCRcalc scripting language and development environment allows users to build models with native PCRaster operations such as map
+algebra and neighbourhood functions. Alternatively, the PCRaster application programming interface (API) allows users to extend its functionality in various programming languages using native and external data types
+(Schmitz et al., 2009). For example, the current version of FALLOW (van
+Noordwijk, 2002; Mulia et al., 2014), a deductive land use change model,
+is built using the PCRaster framework. TerraME (Carneiro et al., 2013)
+is a platform to develop models for simulating interactions between society
+and the environment. It provides more flexibility than PCRaster because
+models can be composed of coupled sub-models with various temporal and
+spatial resolutions (Moreira et al., 2009; Carneiro et al., 2013). The platform is built on the open source TerraLib geospatial library (Câmara et al.,
+2008), which handles several spatio-temporal data types, includes an API
+for coupling the library with R (?) to perform spatial statistics, and supports dynamic modelling with cellular automata. The LuccME extension to
+
+13
+
+TerraME includes implementations of CLUE-S and its predecessor, CLUE
+(Veldkamp and Fresco, 1996; Verburg et al., 1999), written in Lua.
+The R environment is a free and open source implementation of the S
+programming language, a language designed for programming with data
+(Chambers, 2008). Although the development of R is strongly rooted in
+statistical software and data analysis, it is increasingly used for dynamic
+simulation modelling in diverse fields (Petzoldt and Rinke, 2007). Additionally, in the last decade it has become widely used by the spatial analysis
+community, largely due to the sp package (Pebesma and Bivand, 2005; Bivand et al., 2013) which unified many alternative approaches for dealing
+with spatial data in R and allowed subsequent package developers to use
+a common framework for spatial analysis. The raster package (Hijmans,
+2014) provides many functions for raster data manipulation commonly associated with GIS software. Building on these capabilities, several R packages
+have been created for dynamic, spatially explicit ecological modelling (e.g.
+Petzoldt and Rinke, 2007; Fiske and Chandler, 2011). In addition, two
+recent land use change models have been written for the R environment.
+StocModLCC (Rosa et al., 2013) is a stochastic inductive land use change
+model for tropical deforestation while SIMLANDER (Hewitt et al., 2013) is
+a stochastic cellular automata model to simulate urbanisation. Thus, R is
+well suited for spatially explicit land use change modelling. To date, however, R has not been used to develop a framework for land use change model
+development and comparison. The remainder of this paper is divided into
+four sections. First, we discuss the principle design goals of lulcc. We then
+describe the software and demonstrate its main functionality with an example application to the Plum Island Ecosystems site, using data included
+with the package. This is followed by a discussion of the strengths and main
+limitations of the software and approach, as well as areas for future development. Finally we draw brief conclusions from the project.
+
+2.2 Design goals
+The first design goal of lulcc is to provide a framework that allows users
+to perform various stages of the modelling process illustrated by Figure 2.1
+
+14
+
+within the same environment. It therefore includes methods to process and
+explore model input, fit and evaluate predictive models, allocate land use
+change spatially, validate the model and visualise model outputs. This provides many advantages over specialised software applications. Firstly, it
+improves efficiency and reduces the likelihood of user errors because intermediate inputs and outputs exist in the same environment (Fiske and Chandler,
+2011; Pebesma, 2012). Secondly, it encourages interactive model building
+because seperate aspects of the procedure can easily be revisited. Thirdly,
+it is straightforward to experiment with different model setups. Finally, and
+perhaps most importantly, it improves the reproducibility of scientific results
+because the entire modelling process can be expressed programmatically and
+be communicated as such with reasonable effort (Pebesma, 2012).
+lulcc is intended as an alternative to current paradigm of closed source,
+specialised software programs which, in our view, disrupt the scientific process. Thus, the second design goal is to create an open and extensible
+framework allowing users to examine the source code, modify it for their
+own purposes and freely distribute changes to the wider community. The
+package exploits the openness of the R system, particularly with respect
+to the package system, which allows developers to contribute code, documentation and datasets in a standardised format to repositories such as the
+Comprehensive R Archive Network (CRAN) (Pebesma, 2012; Claes et al.,
+2014). As a result of this philosophy R users have access to a wide range of
+sophisticated tools for statistical modelling, data management, spatial analysis and visualisation.
+One of the consequences of providing a modelling framework in R is that
+users of the software must become programmers (Chambers, 2000). We
+recognise that this represents a different approach to the current practice
+of providing land use change software packages with graphical user interfaces (GUIs), and acknowledge that for users unfamiliar with programming
+it could present a steep learning curve. Therefore, the third design goal is
+to provide well documented software that is easy to use and accessible for
+a users with varying levels of programming experience. The package includes
+complete working examples to allow beginners to start using the package immediately from the R command shell, while more advanced users should be
+
+15
+
+able to develop modelling applications as scripts. Furthermore, the package
+is designed to be extensible so that users can contribute new or existing
+methods. Similarly, the source code of lulcc is accessible so that users can
+locate the methods in use and understand algorithm implementations. Acknowledging that many scientists lack any formal training in programming
+(Joppa et al., 2013; Wilson et al., 2014), we hope this final goal will ensure
+the software is useful for educational purposes as well as scientific research.
+
+2.3 Software description
+To achieve the design goals we adopted an object-oriented approach. This
+provides a formal structure for the modelling framework which allows the
+various stages of land use change modelling applications to be handled efficiently. Furthermore, it encourages the reuse of code because objects can be
+used multiple times within the same application or across several different
+applications. It is extensible because it is straightforward to extend existing
+classes using the concept of inheritance, or create new methods for existing
+classes. In lulcc we use the S4 class system (Chambers, 1998, 2008), which
+requires classes and methods to be formally defined. This system is more
+rigorous than the alternative S3 system because objects are validated against
+the class definition when they are created, ensuring that objects behave consistently when they are passed to functions and methods. Figure 2.2 shows
+the class structure of lulcc, while Table 2.1 shows the functions included
+with the package. Here we describe the main components of lulcc integrated
+with an example application for the Plum Island Ecosystems dataset. The
+script used in this paper, including the code used to create the various figures, is supplied with the package as a “demo". Instructions to obtain the
+package and run the demo script are provided in the Code availability section.
+
+2.3.1 Data
+The failure to provide driving data for land use change modelling exercises
+alongside published literature is identified by Rosa et al. (2014) as a major
+
+16
+
+weakness of the discipline. The lulcc package includes two datasets that
+have been widely used in the land use change community, allowing users to
+quickly start exploring the modelling framework. The first of these contains
+data from the Plum Island Ecosystems Long Term Ecological Research site in
+northeast Massachusetts (http://pie-lter.ecosystems.mbl.edu/), which
+in recent decades has undergone extensive land use change from forest to
+residential use (Aldwaik and Pontius, 2012). The dataset included in lulcc
+was originally developed as part of the MassGIS program (MassGIS, 2015)
+but has been processed by Pontius and Parmentier (2014). Land use maps
+depicting forest, residential and other uses are available for 1985, 1991 and
+1999 together with maps of three predictor variables: elevation, slope and
+distance to built land in 1985. The second dataset includes information from
+Sibuyan Island in the Phillipines, and is a modified version of the dataset
+supplied with the CLUE-S model (Verburg et al., 2002).
+
+2.3.2 Data processing
+One of the most challenging aspects of land use change modelling is to obtain and process the correct input data. Currently lulcc requires all spatially
+explicit input data to exist either in the file system, in any of the formats
+supported by raster, or in the R workspace as raster objects (RasterLayer,
+RasterStack or RasterBrick). The most fundamental input required by land
+use change models is an initial map of observed land use, which is usually
+obtained from classified remotely sensed data. This map represents the initial condition for model simulations and, for inductive modelling, is used to
+fit predictive models. Sometimes it is more useful to consider observed land
+use transitions: in this case an additional map for an earlier time point is
+required, as shown by Figure 2.1. Ideally, two more observed land use maps
+for subsequent time points should be obtained for calibrating and validating
+the land use change model (Pontius et al., 2004a). The current version of
+the software only supports categorical land use data, which means that each
+pixel must belong to exactly one category.
+In lulcc observed land use data are represented by the ObsLulcRasterStack class. In the following code snippet we load the package into the
+current session, create an ObsLulcRasterStack object for the Plum Island
+
+17
+
+Ecosystems dataset and plot the result (Figure 2.3):
+> library(lulcc)
+> data(pie)
+> obs <- ObsLulcRasterStack(x=pie,
+pattern="lu",
+categories=c(1,2,3),
+labels=c("Forest","Built","Other"),
+t=c(0,6,14))
+> plot(obs)
+The ObsLulcRasterStack object is important to land use change studies in
+lulcc because it defines the spatial domain of subsequent operations. The
+t argument in the constructor function specifies the time points associated
+with the observed land use maps. The first time point must always be zero;
+if additional maps are present they should be associated with time points
+greater than zero, even in backcast models. In most land use change modelling applications the timestep between two time points represents one year
+but there is no requirement for this to be the case.
+A useful starting point in land use change modelling is to obtain a transition matrix for observed land use maps from two time points to identify
+the main historical transitions in the study region (Pontius et al., 2004b),
+which can be used as the basis for further research into the processes driving
+change. In lulcc we use the crossTabulate function for this purpose:
+> crossTabulate(x=obs, times=c(0,14))
+Forest Built Other
+Forest 44107
+Built
+
+11
+
+Other
+
+1259
+
+4250
+
+656
+
+36957
+
+154
+
+2248 23921
+
+The output of this command reveals that for the Plum Island Ecosystems
+site the dominant change between 1985 and 1999 was the conversion of forest
+to built areas.
+Inductive and deductive land use change models predict the allocation of
+change based on spatially explicit biophysical and socioeconomic explanatory variables. These may be static, such as elevation or geology, or dynamic,
+
+18
+
+such as maps of population density or road networks. In lulcc these two
+types of explanatory variable are separated by a simple naming convention,
+which is explained in detail in the package documentation (see Supplementary material). Collectively, they are represented by an object of class ExpVarRasterList, which can be created as follows:
+> ef <- ExpVarRasterList(x=pie, pattern="ef")
+Apart from observed land use and explanatory variables other input maps
+may be required. The two allocation routines currently included with lulcc
+accept a mask file, which is used to prevent change within a certain geographic area such as a national park or other protected area, and a land use
+history file, which is used as the basis for certain decision rules. These are
+handled by lulcc as standard RasterLayer objects. All input maps should
+have the same spatial resolution as the corresponding ObsLulcRasterStack
+object. This can be achieved using the resample function from the raster
+package, which has been extended to receive lulcc objects. The ExpVarRasterList object created above can be resampled to the parameters of an
+ObsLulcRasterStack object with the following command:
+> ef <- resample(ef, obs)
+
+2.3.3 Predictive modelling
+Inductive land use change models relate the pattern of observed land use to
+spatially explicit explanatory variables. Logistic regression is a common type
+of predictive model used for inductive land use change modelling (e.g. Pontius and Schneider, 2001; Verburg et al., 2002). However, there is growing
+interest in the application of local and non-parametric models (e.g. Tayyebi
+et al., 2014). One reason why R is attractive for land use change modelling is
+that it has become the de facto standard for statistical software development.
+As a result, lulcc can easily support various predictive modelling techniques
+by utilising code from existing R packages. Currently, lulcc supports binary
+logistic regression, available in base R, recursive partitioning and regression
+trees, provided by the rpart package (Therneau et al., 2014), and random
+forests, provided by the randomForest package (Liaw and Wiener, 2002).
+Parametric models such as logistic regression assume the data to be independent and identically distributed (Overmars et al., 2003). In spatial
+
+19
+
+analysis this assumption is often violated because of spatial autocorrelation,
+which reduces the information content of an observation because its value
+can to some extent be predicted by the value of its neighbours (Beale et al.,
+2010). There is also some evidence that non-parametric models may be affected by spatial autocorrelation Mascaro et al. (2014), even though they do
+not assume independence. A simple approach to reduce the impact of this
+phenomenon is to fit predictive models to a random subset of the data (e.g.
+Verburg et al., 2002; Wassenaar et al., 2007; Echeverria et al., 2008). In
+the following code snippet we create training and testing partitions for the
+Plum Island Ecosystems dataset by performing a stratified random sample.
+We do this using the map for 1985 to illustrate the procedure when only
+one observed map is available. We then extract the data for the training
+partition with the getPredictiveModelInputData function and pass the
+resulting data.frame to the three model fitting functions:
+> part <- partition(x=obs[[1]], size=0.1, spatial=TRUE)
+> train.data
+<- getPredictiveModelInputData(obs=obs,
+ef=ef,
+cells=part[["train"]],
+t=0)
+> forms <- list(Built~ef_001+ef_002+ef_003,
+Forest~ef_001+ef_002,
+Other~ef_001+ef_002)
+> glm.models
+
+<- glmModels(formula=forms,
+family=binomial,
+data=train.data,
+obs=obs)
+
+> rpart.models <- rpartModels(formula=forms,
+data=train.data,
+obs=obs)
+> rf.models
+
+<- randomForestModels(formula=forms,
+
+20
+
+data=train.data,
+obs=obs)
+The model fitting functions each return an object of class PredictiveModelList containing a predictive model for each land use type. With these objects
+it straightforward to map the suitability of every pixel in the study region
+to the various land uses. To do this, we use the generic predict function
+with some additional functionality from the raster package and plot the
+resulting RasterStack object (Figure 2.4):
+> all.data <- as.data.frame(x=ef, cells=part[["all"]])
+> probmaps <- predict(object=glm.models,
+newdata=all.data,
+data.frame=TRUE)
+> points
+
+<- rasterToPoints(obs[[1]], spatial=TRUE)
+
+> probmaps <- SpatialPointsDataFrame(points, probmaps)
+> probmaps <- rasterize(x=probmaps, y=obs[[1]],
+field=names(probmaps))
+> levelplot(probmaps)
+In some circumstances it may be appropriate to supply a model with no
+explanatory variables to an allocation routine. For example, Verburg and
+Overmars (2009) used such a model for natural and semi-natural vegetation
+because in their particular case study the selection of pixels for conversion
+to these land uses was based on the suitability of pixels to agricultural and
+urban land rather than the suitability of natural and semi-natural vegetation. In lulcc, this can most easily be achieved by fitting a binary logistic
+regression model with no explanatory variables. To do this, a formula such
+as Forest~1 should be supplied to the glmModels function.
+Methods to evaluate statistical models are provided by the ROCR package (?), allowing the user to assess model performance using various methods including the receiver operator characteristic (ROC), which is used to
+measure the performance of models predicting the presence or abscence of
+a phenomenon (Pontius and Parmentier, 2014). It is often summarised by
+the area under the curve (AUC), where one indicates a perfect fit and 0.5
+indicates a purely random fit.
+
+21
+
+In lulcc we extend the native ROCR classes to better suit our purposes.
+The prediction and performance classes of ROCR are extended by PredictionList and PerformanceList, respectively, to handle objects of class PredictiveModelList. In the folliwing example we evaluate the logistic regression
+models using the testing partition from the 1985 observed land use map.
+Since the Plum Island Ecosystems dataset contains three observed land use
+maps we could also test the predictive models using data from a subsequent
+time point. The procedure to evaluate several PredictiveModelList objects
+using these classes is as follows:
+> test.data
+<- getPredictiveModelInputData(obs=obs,
+ef=ef,
+cells=part[["test"]])
+> glm.pred
+
+<- PredictionList(models=glm.models,
+newdata=test.data)
+
+> glm.perf
+
+<- PerformanceList(pred=glm.pred,
+measure="rch")
+
+> rpart.pred <- PredictionList(models=rpart.models,
+newdata=test.data)
+> rpart.perf <- PerformanceList(pred=rpart.pred,
+measure="rch")
+> rf.pref
+
+<- PredictionList(models=rf.models,
+newdata=test.data)
+
+> rf.perf
+
+<- PerformanceList(pred=rf.pred,
+measure="rch")
+
+> plot(list(glm=glm.perf, rpart=rpart.perf, rf=rf.perf))
+Figure 2.5 shows the ROC curves for each land use type and for each type
+of predictive model supported by lulcc. The plots show that binary logistic regression and random forest models perform similarly for all land uses,
+while regression tree models perform least well.
+Another use of ROC analysis is to assess how well the models predict the
+cells in which gain occurs between two time points. This is only possible if
+a second observed land use map is available for a subsequent time point. In
+the following code snippet we perform this type of analysis for the gain of
+
+22
+
+Built between 1985 and 1991. First, we create a data partition in which cells
+not candidate for gain (cells belonging to Built in 1985) are eliminated. We
+then assess the ability of the various predictive models to predict the gain
+of Built in this partition:
+> part <- rasterToPoints(obs[[1]],
+fun=function(x) x != 2,
+spatial=TRUE)
+> test.data <- getPredictiveModelInputData(obs=obs,
+ef=ef,
+cells=part,
+t=6)
+> glm.pred
+
+<- Prediction(models=glm.models[[2]],
+newdata=test.data)
+
+> glm.perf
+
+<- Performance(pred=glm.pred,
+measure="rch")
+
+> plot(list(glm=glm.perf))
+Figure 2.6 shows the resulting ROC curve.
+
+2.3.4 Demand
+Spatially explicit land use change models are normally driven by non-spatial
+estimates of either the total number of cells occupied by each category at
+each time point or the number of transitions among the various categories
+during each time interval. This means regional drivers of land use change,
+such as population growth and technology, are considered implicitly (Fuchs
+et al., 2013). While some models calculate demand at each time point based
+on the spatial configuration of the landscape at the previous time point (e.g.
+Rosa et al., 2013), it is more common to specify the demand for every time
+point at the beginning of the simulation (e.g. Pontius and Schneider, 2001;
+Verburg et al., 2002; Sohl et al., 2007). In lulcc the way in which demand
+is specified is unique to individual allocation models. Currently, both allocation models currently included in the package require the total number
+of cells belonging to each category at every time point to be supplied as
+a matrix or data.frame before running the allocation routine.
+
+23
+
+Land use area may be estimated using non-spatial land use models or, in
+the case of a backcast model, national and subnational land use statistics
+may be used (e.g. Ray and Pijanowski, 2010; Fuchs et al., 2013). lulcc
+includes a function to interpolate or extrapolate land use area based on two
+or more observed land use maps: this approach is often used to predict the
+quantity of land use change in the near-term (Mas et al., 2014). For the
+current example we obtain land use demand for each year between 1985 and
+1999 by linear interpolation, as follows:
+> dmd <- approxExtrapDemand(obs=obs, tout=0:14)
+In reality we are not usually interested in simulating land use change between
+two time points for which observed land use data is available. However, doing so is useful for model pattern validation, allowing us to test the ability of
+models to predict the spatial allocation of change given the exact quantity
+of change.
+
+2.3.5 Allocation
+The allocation algorithm in land use change models determines the pixels in
+which various land use transitions should take place (Verburg et al., 2002).
+Currently lulcc includes two allocation routines: an implementation of the
+CLUE-S algorithm and a stochastic ordered procedure based on the algorithm described by Fuchs et al. (2013). Both routines allow the user to
+optionally provide various decision rules. These are implemented before the
+main allocation algorithm at each time point and allow the user to incorporate additional knowledge about the study site.
+
+Decision rules
+The first decision rule included in lulcc is used to prohibit certain land use
+transitions. For example, in most situations it is unlikely that urban areas
+will be converted to agricultural land because the initial cost of urban development is high (Verburg et al., 2002). The second rule specifies a minimum
+number of timesteps before a certain transition is allowed, while the third
+rule specifies a maximum number of timesteps after which change is not
+
+24
+
+allowed. These rules are used to control land use transitions that are timedependent, such as the transition from shrubland to closed forest (Verburg
+and Overmars, 2009). The fourth rule prohibits transitions to a certain land
+use in cells that are not within a user-defined neighbourhood of cells already
+belonging to that land use. This rule is particularly relevant to cases of
+deforestation or urbanisation.
+Within the allocate function the first three decision rules are applied
+by the allow function and the fourth rule is applied by the allowNeighb
+function. For time dependent decision rules the user should supply a land
+use history raster map, specifying the length of time each pixel has belonged
+to the current land use. If this is not supplied each pixel is assigned a value
+of one, representing one model timestep. To apply neighbourhood rules it
+is necessary to supply corresponding neighbourhood maps to the allocation
+routine. In lulcc these are represented by the NeighbRasterStack class.
+Objects of this class are created with the following command:
+> w
+
+<- matrix(data=1, nrow=3, ncol=3)
+
+> nb <- NeighbRasterStack(x=obs[[1]], weights=w,
+categories=c(1,2,3))
+Essentially, the allow and allowNeighb functions identify disallowed transitions according to the decision rules and set the suitability of these cells
+to NA. These transitions are ignored by the allocation routine. Care should
+be taken to ensure that after any decision rules are taken into account there
+are sufficient cells eligible to change in order to meet the specified demand
+at each time point.
+
+CLUE-S allocation method
+The CLUE-S model implements an iterative procedure to meet the specified
+demand at each time point and handle competition between land uses. The
+model is summarised briefly here: for a full description see Verburg et al.
+(2002) and Castella and Verburg (2007). The algorithm in lulcc is based on
+the description of the model provided by Verburg et al. (2002) only. As a result, for the reasons discussed by Ince et al. (2012), users should not expect
+
+25
+
+to exactly reproduce the output from the original model implementation.
+In the first instance each cell is allocated to the land use with the highest
+suitability as determined by the predictive models. Whereas the original
+CLUE-S model is based on binary logistic regression, lulcc allows any predictive model supported by PredictiveModelList to be used. For each land
+use the algorithm determines whether the allocated area is less than, equal
+to or greater than the specified demand. If it is less than or greater than
+demand the suitability of each pixel in the study region to the land use in
+question is increased or decreased, respectively, by an amount depending
+on the difference between the allocated area and specified demand. If the
+allocated area equals demand the suitability is left unchanged. This procedure is repeated until the demand for all land uses, within a user-defined
+tolerance, is met. At each iteration the original model perturbs the suitability of each pixel to the various land uses in order to limit the influence
+of nominal differences in land use suitability on the final model solution.
+This is replicated in lulcc with the parameter jitter.f, which controls the
+upper and lower limits of the uniform random distribution from which the
+perturbation applied to each pixel is drawn. The default value of jitter.f
+is zero, resulting in a deterministic model. For a full description of the various other parameters supplied to the CLUE-S routine please consult the
+package documentation.
+In lulcc allocation models are represented by unique classes. In the following code snippet we first set the decision rules to allow all possible transitions
+and then define some parameter values. Then, we create an object of class
+CluesModel and pass this to the generic allocate function:
+> clues.rules <- matrix(data=1, nrow=3, ncol=3)
+> clues.parms <- list(jitter.f=0.0002,
+scale.f=0.000001,
+max.iter=1000,
+max.diff=50,
+ave.diff=50)
+> clues.model <- CluesModel(obs=obs,
+ef=ef,
+
+26
+
+models=glm.models,
+time=0:14,
+demand=dmd,
+elas=c(0.2,0.2,0.2),
+rules=clues.rules,
+params=clues.parms)
+> clues.model <- allocate(clues.model)
+As an iterative procedure the CLUE-S algorithm employs for-loops, which
+are slow in R. To overcome this limitation we have written the CLUE-S
+procedure as a C extension using the .Call interface.
+
+Ordered method
+The ordered allocation method is based on the algorithm described by Fuchs
+et al. (2013). The approach is less computationally expensive and more stable than the CLUE-S algorithm because it doesn’t simulate competition
+between land uses. Instead, land allocation is performed in a hierarchical
+way according to the perceived socioeconomic value of each land use. For
+land uses with increasing demand only cells belonging to land uses with lower
+socioeconomic value are considered for conversion. In this case, n cells with
+the highest suitability to the current land use are selected for change, where
+n equals the number of transitions required to meet the demand, as specified by the demand matrix supplied as an input to the allocation routine.
+The converted cells, as well as the cells that remain under the current land
+use, are masked from subsequent operations. For land uses with decreasing
+demand only cells belonging to the current land use are allowed to change.
+Here, n cells with the lowest allocation suitability are converted to a temporary class which can be allocated to subsequent land uses. The land use
+with the lowest socioeconomic value is a special case because it is considered
+last and, therefore, the number of cells that have not been assigned to other
+land uses must equal the demand for this land use.
+We modify the algorithm described by (Fuchs et al., 2013) to allow stochastic transitions. If this option is selected, the allocation suitability of each cell
+allowed to change is compared to a random number between zero and one
+
+27
+
+drawn from a uniform distribution. If demand for the land use is increasing
+only cells where the allocation suitability is greater than the random number
+are allowed to change, whereas for decreasing demand only cells where it is
+less than the random number are allowed to change. To make the model
+deterministic the user can set the stochastic argument to FALSE when
+the allocate function is called.
+In lulcc the ordered allocation model is represented by the OrderedModel
+class. In the following code we create an OrderedModel object, supplying
+the order in which to allocate change (built, forest, other), and pass this to
+the allocate function:
+> ordered.model <- OrderedModel(obs=obs,
+ef=ef,
+models=glm.models,
+time=0:14,
+demand=dmd,
+order=c(2,1,3))
+> ordered.model <- allocate(ordered.model, stochastic=TRUE)
+
+2.3.6 Pattern validation
+Spatially explicit land use change models are validated by comparing the
+initial observed map with an observed and simulated map for a subsequent
+time point (Pontius et al., 2011). Previous studies have extracted useful
+information from the three possible two-map comparisons (e.g. ?), however,
+recently Pontius et al. (2011) devised the concept of a three-dimensional
+contingency table to compare the three maps simulataneously. Not only
+is this approach more parsimonious, it also yields more information about
+quantity and allocation performance (Pontius et al., 2011). For example,
+from the table it is straightforward to identify sources of agreement and
+disagreement considering all land use transitions, all transitions from one
+land use or a specific transition from one land use to another. In addition,
+it is possible to separate agreement between maps due to persistence from
+agreement due to correctly simulated change. This is important because in
+most applications the quantity of change is small compared to the overall
+study area (Pontius et al., 2004b; van Vliet et al., 2011), giving a high rate
+
+28
+
+of total agreement which can misrepresent the actual model performance.
+It is useful to perform pattern validation at multiple resolutions because
+comparison at the native resolution of the three maps fails to separate minor allocation disagreement, which refers to allocation disagreement at the
+native resolution that is counted as agreement at a coarser resolution, and
+major allocation disagreement, which refers to allocation disagreement at
+the native resolution and the coarse resolution (Pontius et al., 2011).
+In lulcc, three-dimensional contingency tables at multiple resolutions are
+represented by the ThreeMapComparison class. Two subclasses of ThreeMapComparison represent two types of information that can be extracted
+from the tables: AgreementBudget represents sources of agreement and
+disagreement between the three maps at several resolutions while FigureOfMerit represents figure of merit scores. This measure, which is useful to
+summarise model performance, is defined as the intersection of observed and
+simulated change divided by the union of these (Pontius et al., 2011), such
+that a score of one indicates perfect agreement and a score of zero indicates
+no agreement. Plotting functions for ThreeMapComparison, AgreementBudget and FigureOfMerit objects allow the user to visualise model performance. The ordered model output for Plum Island Ecosystems is validated
+in the following way:
+> ordered.tabs <- ThreeMapComparison(x=ordered.model,
+factors=2^(1:8),
+timestep=14)
+> ordered.agr
+
+<- AgreementBudget(x=ordered.tabs)
+
+> plot(ordered.agr, from=1, to=2)
+> ordered.fom
+
+<- FigureOfMerit(x=ordered.tabs)
+
+> plot(ordered.fom, from=1, to=2)
+This procedure was repeated for the CLUE-S model output. The agreement
+budgets for the transition from Forest to Built for the two allocation procedures are shown by Figure 2.7, while Figure 2.8 shows the corresponding
+figure of merit scores.
+
+29
+
+2.4 Discussion
+The example application for Plum Island Ecosystems demonstrates the key
+strengths of the lulcc package. Firstly, it allows the entire modelling procedure to be carried out in the same environment, reducing the likelihood of
+mistakes that commonly arise when data and models are transferred between
+different software programs. A framework in R specifically allows users to
+take advantage of a wide range of statistical and machine learning techniques for predictive modelling. The framework allows users to experiment
+with various model structures interactively and provides methods to quickly
+compare model outputs. The example also highlights the advantages of an
+object-oriented approach: land use change modelling involves several stages
+and without dedicated classes for the associated data it would be difficult
+to keep track of the intermediate model inputs and outputs.
+lulcc is substantially different from alternative environmental modelling
+frameworks. Most importantly, lulcc is designed for land use change modelling only, whereas frameworks such as PCRaster and TerraME provide
+general tools that can be applied to various spatial analysis problems such
+as land use change, hydrology and ecology. As a result, these tools are targeted towards the model developer rather than the end user. In contrast,
+most software programs for land use change modelling are designed with the
+user in mind, with very few providing any way for users or developers to
+improve or even understand model implementations. With lulcc we have
+attempted to reduce the gap between user and developer. The R system is
+well suited for this task, as Pebesma (2012) notes “the step from being a user
+to becoming a developer is small with R". The package system ensures that
+lulcc will work across Windows, MacOS and Unix platforms, whereas many
+existing applications are platform dependent. Comprehensive documentation of the functions, classes and methods of lulcc, together with complete
+working examples, enable the user to immediately start using the software,
+while the object-oriented design ensures that developers can easily write extensions to the package.
+Despite its manifest advantages, there remain some drawbacks to land
+use change modelling in R. Firstly, the lack of a spatio-temporal database
+
+30
+
+backend to support larger datasets (Gebbert and Pebesma, 2014) restricts
+the amount of data that can be used in a given application because R loads
+all data into memory. The raster package overcomes this limitation by
+storing raster files on disk and processing data in chunks (Hijmans, 2014).
+lulcc has been designed to make use of this facility where possible, however,
+during allocation it is necessary to load the values of several maps into the
+R workspace at once because the allocation procedure must consider every
+cell eligible for change simultaneously. The generic predict function belonging to the raster package offers one possible solution to this problem,
+allowing predictive models to be used in a memory-safe way. In effect, this
+would mean spatially explicit input data including observed land use maps
+and explanatory variables could be handled in chunks and only the resulting
+probability surface would have to be loaded into the R workspace. However,
+this is not currently implemented in lulcc because it is excessively time consuming compared to the current approach. Despite this limitation, since
+most applications involve a relatively small geographic extent or, in the case
+of regional studies (e.g. Verburg and Overmars, 2009; Fuchs et al., 2015),
+use a coarser map resolution, memory should not normally cause lulcc applications to fail. For example, the CluesModel and OrderedModel objects
+from the above example each had a size of approximately 40Mb, which is
+easily handled by modern personal computers. On a 64-bit machine with
+Intel Core i3 @ 1.4 GHz and 4Gb RAM, the allocation methods for the two
+Model objects took 50 seconds and 8 seconds, respectively.
+The software presented here is still in its infancy and there are several areas for improvement. The present allocation routines receive the quantity of
+land use change for each time point before the allocation procedure begins.
+However, some recent models do not impose the quantity of change but instead allow change to occur stochastically based on land use suitability. For
+example, StocModLcc (Rosa et al., 2013) deforests a cell if the probability
+of deforestation is less than a random number from a uniform distribution.
+The quantity of change is simply the number of cells deforested after each
+cell in the study region is considered for deforestation twice, with the probability of change, which depends on the allocation of previous deforestation
+events, updated after the first round. One advantage of this approach is
+that it accounts for uncertainty in the quantity and allocation of change
+
+31
+
+simultaneously, whereas the current routines in lulcc only consider the allocation of change as a stochastic process. Other models such as LandSHIFT
+(Schaldach et al., 2011) receive demand at the national or regional level
+from integrated assessment models such as IMAGE (Stehfast et al., 2014)
+or Nexus Land-Use (Souty et al., 2012). Coupling lulcc with this class of
+model would be a valuable addition to the software because land use change
+is increasingly recognised as an issue with drivers and implications at local,
+regional, continental and global levels.
+An important contribution of lulcc is to provide modules to assist with
+model pattern validation, a crucial aspect of model development that is nevertheless frequently overlooked within the land use change modelling community (Rosa et al., 2014). A further improvement that could be made to the
+package is to incorporate more sophisticated ways of fitting and testing the
+predictive models that estimate land use suitability. For example, a routine
+to calculate the Total Operating Characteristic (TOC) (Pontius and Parmentier, 2014) would improve upon the ROC analysis currently supported.
+While ROC shows two ratios, hits/(hits+misses) and false alarms/(false
+alarms+correct rejections), at multiple resolutions, TOC reveals the quantities used to calculate these ratios, allowing greater interpretation of model
+diagnostic ability.
+One of the main strengths of lulcc is that multiple model structures can
+be explored within the same environment. Thus, the more allocation routines available in the package the more useful it becomes. Two existing land
+use change models, StocModLCC and SIMLANDER, are written in R and
+available as open source software. Future work could integrate these routines with lulcc to broaden the available model structures and, therefore,
+improve the ability of lulcc to capture model structural uncertainty. The
+methods in the current version of lulcc only permit an inductive approach
+to land use change modelling. Deductive models are fundamentally different
+because they attempt to model explicitly the processes that drive land use
+change (Pérez-Vega et al., 2012). This means that, unlike inductive models,
+they can be used to establish causality between land use change and its driving factors (Overmars et al., 2007). Including this class of model in lulcc
+would allow inductive and deductive land use change models with different
+
+32
+
+spatial resolutions to be dynamically coupled in order to better capture the
+complexity of the land use system (Moreira et al., 2009).
+Free and open source software improves the reproducibility of scientific
+results and allows users to adapt and extend code for their own purposes.
+Thus, we encourage the land use change community to participate in the
+future development of lulcc. Perhaps one of the simplest ways to improve
+the package is to experiment with the example datasets to identify bugs
+and areas for improvement. Those with more programming experience may
+wish to extend the functionality of the package themselves and contribute
+these changes upstream. In addition, existing land use change models can
+easily be included in the package by wrapping the original source code in
+R; a relatively straightforward task for commonly used compiled languages
+(C/C++, Fortran). Users may also develop their own R packages that depend on lulcc for some functionality: this is one of the strengths of the R
+package system. Finally, we invite land use change modellers to submit land
+use change datasets (observed and, if possible, modelled land use maps and
+spatially explicit explanatory variables) for inclusion in the package.
+
+2.5 Conclusion
+In this paper we have presented lulcc, a free and open source software package providing an object-oriented framework for land use change modelling
+in R. lulcc allows various aspects of the modelling process to be performed
+within the same environment, supports three types of predictive model and
+includes two allocation routines. The modelling process can be expressed
+programmatically, facilitating reproducible science. Releasing the software
+under an open source licence (GPL) means that users have access to the algorithms they implement when they run a particular model. As a result, they
+can identify improvements to the code and, under the terms of the licence,
+are free to redistribute changes to the wider community. We view lulcc as
+an initial step towards an open paradigm for land use change modelling and
+hope, therefore, that the community will participate in its development.
+
+33
+
+Code availability
+The R project for statistical computing is available for Windows, MacOS and
+several Unix platforms. To download R, visit the project homepage: https:
+//www.r-project.org/. Two popular and free integrated development environments (IDEs) are provided by RStudio (https://www.rstudio.com/)
+and ESS (http://ess.r-project.org/). We suggest that potential lulcc
+users familiarise themselves with the raster package by reading the “Introduction to the raster package" vignette, available on the package homepage:
+https://cran.r-project.org/web/packages/raster/.
+The lulcc source code currently resides on CRAN. This paper corresponds
+to version 1.0 of the package. It can be downloaded from the R command
+line as follows:
+> install.packages("lulcc")
+The script for the Plum Island Ecosystems application is available as a demo
+within the package. To load the package and run the demo, type the following commands:
+> library(lulcc)
+> demo(package = "lulcc")
+> demo(topic = "gmd-paper")
+
+34
+
+LULCC (t1-t0)
+
+or
+LULC (t1)
+
+Explanatory
+variables
+
+Other inputs
+
+Select variables,
+predictive model type
+Fit predictive
+models
+
+Land use
+suitability
+
+Quantity of
+LU change
+
+Spatial
+allocation
+Simulated
+LULC (t2)
+
+LULC (t2)
+
+Model refinement
+Validation
+
+Figure 2.1: Diagram showing the general methodology used for inductive
+land use change modelling applications, adapted from Mas et al.
+(2014). The input land use/land cover data can be a single
+categorical map showing the pattern of land use/land cover at
+one time point (LULC (t1)) or a series of maps showing historical
+land use/land cover transitions (LULCC (t1-t0)).
+
+35
+
+Figure 2.2: Class diagram in the Unified Modeling Language (UML) for
+lulcc, showing the main classes and methods included in the
+package.
+36
+
+Table 2.1: Functions included in the lulcc package
+Function name
+Description
+AgreementBudget
+Calculate agreement budget (Pontius et al., 2011)
+getPredictiveModelInputData
+Create data.frame with variables required to fit predictive models
+allocate
+Perform spatial allocation using various methods
+approxExtrapDemand Create a demand scenario by linear extrapolation
+compareAUC
+Compare the area under the curve (AUC) for various predictive models
+crossTabulate
+Calculate the contingency table for two categorical
+raster maps
+FigureOfMerit
+Calculate the figure of merit (Pontius et al., 2011)
+glmModels
+Fit multiple glm models
+NeighbRasterStack
+Calculate neighbourhood values
+partition
+Partition Raster* map
+PredictionList
+Create a ROCR prediction object for each model in
+a PredictiveModelList object
+PerformanceList
+Create a ROCR performance object for each prediction object contained in a PredictionList object
+predict
+Make predictions using a PredictiveModelList object
+randomForestModels Fit multiple random forest models
+rpartModels
+Fit multiple recursive partitioning and regression
+tree models
+resample
+Resample an ExpVarRasterList object to the parameters of an ObsLulcRasterStack object
+ThreeMapComparison Calculate three-dimensional contingency tables
+(Pontius et al., 2011)
+total
+Sum the total number of cells belonging to each
+class of a categorical raster map
+
+37
+
+lu_pie_1985
+
+lu_pie_1991
+
+lu_pie_1999
+
+950000
+940000
+930000
+920000
+
+220000
+
+240000
+
+260000
+
+220000
+
+240000
+
+260000
+
+Forest
+Built
+Other
+
+Figure 2.3: Observed land use maps for the Plum Island Ecosystems site
+in 1985, 1991 and 1999, created by plotting the ObsLulcRasterStack object representing the data.
+
+Forest
+
+Built
+
+Other
+
+950000
+940000
+930000
+920000
+
+220000
+
+0.0
+
+240000
+
+0.2
+
+260000
+
+220000
+
+0.4
+
+0.6
+
+240000
+
+0.8
+
+260000
+
+1.0
+
+Figure 2.4: Suitability of pixels in the Plum Island Ecosystems study site to
+belong to Forest, Built and Other land use classes according to
+binary logistic regression models. Elevation and slope are used
+as explanatory variables for all land uses while Built additionally
+includes distance to built pixels in 1985.
+
+38
+
+0.0 0.2 0.4 0.6 0.8 1.0
+
+Hits/(Hits + Misses)
+
+Forest
+
+Built
+
+Other
+
+1.0
+0.8
+0.6
+0.4
+0.2
+glm: AUC=0.6423
+rpart: AUC=0.6222
+rf: AUC=0.6117
+
+0.0
+
+glm: AUC=0.9384
+rpart: AUC=0.9158
+rf: AUC=0.9363
+
+0.0 0.2 0.4 0.6 0.8 1.0
+
+glm: AUC=0.7276
+rpart: AUC=0.6458
+rf: AUC=0.7074
+
+0.0 0.2 0.4 0.6 0.8 1.0
+
+False Alarms/(False Alarms + Correct Rejections)
+
+Figure 2.5: ROC curves showing the ability of each type of predictive model
+to simulate the observed pattern of land use in the Plum Island
+Ecosystems site in 1985 in the data partition left out of the fitting
+procedure.
+
+Built
+
+Hits/(Hits + Misses)
+
+1.0
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0.0
+
+glm: AUC=0.6448
+0.0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+
+False Alarms/(False Alarms + Correct Rejections)
+
+Figure 2.6: ROC curve showing the ability of the binary logistic regression
+model fitted on observed land use data from 1985 to predict the
+gain in Built land between 1985 and 1991.
+
+39
+
+Ordered
+
+0.08
+
+0.06
+
+0.04
+
+Fraction of study area
+
+0.02
+
+0.00
+
+CLUE−S
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0.00
+2
+
+4
+
+8
+
+16
+
+32
+
+64
+
+128
+
+256
+
+Resolution (multiple of native pixel size)
+Persistence simulated as change (false alarms)
+Change simulated as change to wrong category (wrong hits)
+Change simulated correctly (hits)
+Change simulated as persistence (misses)
+
+Figure 2.7: Agreement budget for the transition from Forest to Built for the
+two model outputs considering reference maps at 1985 and 1999
+and simulated map for 1999. The plot shows the amount of correctly allocated change increases as the map resolution coarsens.
+
+40
+
+Ordered
+
+1.0
+
+0.8
+●
+
+●
+
+●
+
+0.6
+
+●
+●
+
+0.4
+
+●
+
+0.2
+
+Figure of merit
+
+●
+●
+
+0.0
+
+CLUE−S
+
+1.0
+
+0.8
+●
+
+0.6
+
+●
+
+●
+●
+
+0.4
+
+●
+●
+
+0.2
+
+●
+●
+
+0.0
+2
+
+4
+
+8
+
+16
+
+32
+
+64
+
+128
+
+256
+
+Resolution (multiple of native pixel size)
+
+Figure 2.8: Figure of merit scores corresponding to the agreement budgets
+depicted in Figure 2.7.
+
+41
+
+3 Land cover change in India
+The lack of an historical land cover change dataset for India... This chapter
+describes efforts to generate historical land cover data using land use change
+modelling.
+
+3.1 Literature review
+3.2 Mapping land cover
+Land cover affects the surface energy and water balances by changing the surface albedo and the partition between sensible and latent heat (?Feddema,
+2005). This means that an accurate description of land cover at the Earth’s
+surface is required to model land-atmospere interactions (Friedl et al., 2002).
+Additionally, over the last century population growth and technological development has driven rapid and widespread environmental change as human
+dependence on goods and services from the Earth’s ecosystems has increased
+(?). Land cover change may be a significant driver of observed changes in
+regional climate in northern India (e.g. ?Pitman et al., 2009; Niyogi et al.,
+2010). However, a land cover change dataset for northern India, documenting the effects of the green revolution in a spatially explicit way, does not
+exist. In this section the various global land cover products are reviewed, followed by a description of a land use change model, the Change in Land Use
+and Effects at small regional extent (CLUE-s) (?Verburg and Veldkamp,
+2004), which can be used to extrapolate available land cover products in
+time.
+
+42
+
+3.2.1 Global land cover products
+Early global and regional land cover maps (???) were based on field surveys and ancillary information from different sources. While these efforts
+provided useful information on global land cover distribution, the maps had
+low spatial resolution and only provided estimates of potential vegetation
+based on local climate (Friedl et al., 2002). It is now widely acknowledged
+that adequate parameterisation of the land surface can only be achieved by
+assimilating remotely sensed data (?Friedl et al., 2002). Land cover maps
+based on remote sensing are commonly produced using unsupervised or supervised classification algorithms to divide multispectral satellite images into
+classes with statistically similar spectral properties (?). Unsupervised classification methods seperate the image into a specified number of classes based
+on the image statistics. These abstract classes are then assigned to land
+cover types based on ground truth data. Supervised classification methods
+divide the image into meaningful classes based on image statistics derived
+from user identified training samples (?).
+Several global land cover products have been derived from remotely sensed
+data (?). ? produced a map with eleven land cover classes from multitemporal normalised difference vegetation index (NDVI) data at one degree resolution derived from NASA’s Advanced Very High Resolution Radiometer
+(AVHRR) instrument. Land cover types were separated using a supervised
+classification procedure based on the phenology of different plants reflected
+in the NDVI data. ? extended this method to incorporate information from
+all AVHRR spectral bands. Loveland et al. (2000) developed the DISCover
+product for International Geosphere-Biosphere Project, Data and Information Systems (IGBP-DIS), a map with a spatial resolution of one kilometre produced using unsupervised classification of monthly composited NDVI
+AVHRR data. Using the same AVHRR dataset, ? created the the University
+of Maryland (UMD) global land cover product using a supervised classification procedure based on empirical metrics derived from multitemporal
+AVHRR data. Although AVHRR data has been widely used for global land
+cover mapping the design of the instrument is not optimised for this purpose
+(Friedl et al., 2002). It is widely recognised that AVHRR data is sensitive
+to the effects of clouds, humidity and aerosols (e.g. ?Loveland et al., 2000;
+
+43
+
+Friedl et al., 2002). Further, ? argues that the poor spectral resolution of
+the AVHRR instrument makes it unsuitable for land cover mapping applications. Finally, AVHRR data contains a substantial amount of noise because
+the viewing angle of the instrument varies significantly (?Friedl et al., 2002).
+The MODIS instrument, launched on board the NASA Terra satellite
+in 1999 and Aqua satellite in 2002, was designed to address many of the
+shortcomings of the AVHRR instrument to provide an improved dataset for
+remote sensing applitcations (Friedl et al., 2002). The MODIS global land
+cover product (MOD12) (Friedl et al., 2002), consisting of a 500m spatial
+resolution land cover map for each year since 2001, is produced using a supervised classification procedure that exploits the information content of seven
+spectral bands (Friedl et al., 2002). An advantage of the MODIS product
+over alternative products is that is provides a time series dataset which allows land cover changet to be monitored. However, Friedl et al. (2010) state
+that inconsistencies in the MODIS dataset, arising from the fact that global
+land cover is highly dynamic, mean that the change between years indicated
+by MOD12 is well above observed change. Thenkabail et al. (2005), as part
+of the Global Irrigated Area Mapping (GIAM) project of the International
+Water Management Institute (IMWI) (e.g. ?), developed a land cover map
+of the Indus Ganges basins for 2001 and 2002 at 500m spatial resolution by
+performing a supervised classification of multitemporal MODIS images with
+seven spectral bands. This product provides detailed information about the
+crop calender and irrigation practices in the Indus-Ganges basin. Regional
+and global land cover maps produced for one point in time, or with low
+temporal resolution such as the MODIS land cover product, have limited
+use for land surface modelling applications because they cannot provide information on land cover dynamics on an intraseasonal basis.
+Regional and global land cover mapping projects using supervised and unsupervised methods, such as those outlined above, require extensive ground
+truth data to extract meaningful classes from satellite imagery and to formally assess the accuracy of the land cover product (?Loveland et al., 2000;
+?). Collecting sufficient data for these tasks is time consuming and expensive (Thenkabail et al., 2005). Furthermore, given that land cover is highly
+dynamic (?), it is difficult to ensure the validity of ground truth data after
+
+44
+
+a certain period of time (Friedl et al., 2002). For these reasons it is common
+to use high resolution satellite imagery and aerial photography as ground
+truth data (e.g. ?Loveland et al., 2000; ?), increasing the level of subjectivity
+required to assign land cover classes to ground truth sites. Performing the
+classification is again time consuming and highly subjective as the process
+cannot currently be automated (Loveland et al., 2000). Underlying these issues is the problem of data availability, which is poor for many regions. For
+many applications, therefore, unsupervised and supervised methods based
+on statistical classification algorithms are not suitable.
+Adopting a simple approach, ? developed a classification logic based on
+threshold values to distinguish six vegetation classes using multitemporal
+NDVI data to describe the vegetation canopy. ? showed that class separability improved when classification was performed on the ratio between
+land surface temperature (LST), which can be detected with remote sensing,
+and NDVI compared to either dataset taken independently. ? explained in
+biophysical terms the significance of the LST-NDVI ratio, concluding that
+whilst the NDVI is an indicator of the vegetation canopy only, LST contains
+more information about the physical characteristics of the land surface, such
+as surface roughness and albedo. ? incorporated multitemporal LST, Red
+and NIR to extend the classification logic put forward by ? to identify eight
+vegetation classes. As this method is based on the physical properties of
+the land surface it is objective and, depending on the quality of the satellite
+imagery, consistent. It is straightforward to automate the procedure which
+increases the reproducibility of the method and reduces the time and resources required to produce a land cover product. The main limitation of
+the method is the limited number of land cover classes it yields. However,
+implementing such a method may give a first order estimate of the temporal
+dynamics of the main land cover types across a region.
+
+45
+
+4 India irrigation
+While spatially explicit information about land cover...
+
+46
+
+5 Hydrometeorological feedbacks in
+Northern India
+This chapter describes the methodology to construct...
+
+47
+
+5.1 Literature review
+5.1.1 Surface energy and water balances
+Surface energy balance
+Fundamentally, the global climate system is driven by solar radiation, which
+almost all exists in the shortwave range (?). Incoming radiation may be
+absorbed, reflected or transmitted by the atmosphere (?Seneviratne et al.,
+2010; ?). The energy that reaches that Earth’s surface may be absorbed or
+reflected depending on the surface albedo. The net radiation at the Earth’s
+surface, Rn , can be expressed as:
+
+Rn = S ↓ (1 − α) + L ↓ −L ↑
+
+(5.1)
+
+where S ↓ is incoming shortwave radiation, α is surface albedo, and L ↓ and
+L ↑ are incoming and outgoing longwave radiation respectively. Net radiation is transferred to the atmosphere primarily through sensible and latent
+heat fluxes (?). Sensible heat is the energy transferred from the Earth’s surface to the atmosphere by convection and conduction, while latent heat is the
+energy absorbed or released by the atmosphere when water changes state.
+To evaporate water, an amount of energy called the latent heat of vapourisation, which varies with temperature, is released by the atmosphere. When
+water condenses an amount of latent heat corresponding to the latent heat
+of vapourisation is transferred to the atmosphere (?). The partition between
+sensible and latent heat fluxes is defined as the Bowen ratio, B, which can
+be written:
+
+B=
+
+λE
+H
+
+(5.2)
+
+where λE is latent heat flux and H is sensible heat flux. In addition to
+sensible and latent heat fluxes net radiation drives the flux of heat to the
+soil and, where biomass is present, chemical energy which is stored in plants
+during photosynthesis and subsequently released during respiration (?). Collectively these terms gives rise to the surface energy budget equation for a
+surface soil layer, which can be written as:
+
+48
+
+dH
+= Rn − H − λE − G − F
+dt
+
+(5.3)
+
+where dH/dt is the total energy flux within the soil layer, G is soil heat flux
+and F is chemical energy storage. As the soil thickness decreases dH/dt
+approaches zero and G represents the heat flux at the land surface (Seneviratne et al., 2010).
+
+Moist static energy
+The total energy in the planetary boundary layer is called moist static energy
+and comprises sensible and latent heat, supplied from the surface fluxes of
+energy and moisture, respectively, and potential energy (??). It can be
+writen as:
+
+M SE= Cp T + Lv q + gZ
+
+(5.4)
+
+where Cp is the specific heat capacity at constant pressure, T is air temperature in Kelvin, Lv is the latent heat of vapourisation, q is specific humidity,
+g is gravitational force and Z is elevation. The existence of a significant vertical gradient of moist static energy in the planetary boundary layer, such
+that moist static energy decreases with elevation, drives moist convection
+which results in local convective storms (???). Similarly, a horizontal gradient of moist static energy strengthens large scale thermal circulation from
+areas of high moist static energy to an areas of low moist static energy (??).
+Together, these two effects play an important role in the formation of the
+Asian monsoon.
+
+Surface water balance
+Precipitation reaching the Earth’s surface may be intercepted by vegetation
+or it may fall directly to the soil surface. Intercepted water either evaporates
+directly from the canopy or falls to the soil surface, where it may enter the
+soil as infiltration or contribute to surface runoff. Water entering the soil
+
+49
+
+may be evaporated from the surface, drain through the soil to recharge
+the underlying aquifer or drawn up by plant roots and transpired from the
+canopy (?). Thus, for the same soil layer considered previously, the surface
+water budget equation may be written:
+
+dS
+= P − E − Qs − Qd
+dt
+
+(5.5)
+
+where dS/dt is the change in storage within the soil layer P is precipitation,
+E is evaporation, Qs is surface runoff and Qd is subsurface drainage. It
+should be noted that Equations 5.3 and 5.5 are linked through the evaporation term.
+
+5.1.2 Soil moisture feedbacks
+Soil moisture is defined as the water stored in the unsaturated zone of a
+soil layer (?). Volumetric soil moisture, θ, defines the volume of water, Vw ,
+compared to the total volume, Vt , of the soil layer. It can be expressed as:
+
+θ=
+
+Vw
+Vt
+
+(5.6)
+
+where Vt is comprised of the volume of solids, Vs , volume of air, Va and
+volume of water. The soil porosity, φ, is the theoretical maximum value of
+volumetric soil moisture (?). However, in practice, the maximum soil moisture content that can be utilised by plants is the difference between the field
+capacity, θf c , defined as the maximum amount of water that can be held by
+the soil matrix against the force of gravity, and the permanent wilting point,
+θwilt , defined as the point at which plant roots cannot draw any water from
+the soil matrix (?).
+Equations 5.3 and 5.5 show that the surface energy and water balances
+are linked through the evapotranspiration term. A useful concept when
+considering the relationship between soil moisture and evapotranspiration is
+the evaporative fraction, EF , expressed as:
+
+50
+
+EF =
+
+λE
+Rn
+
+(5.7)
+
+As shown in Figure 5.1, the evaporative fraction increases with soil moisture
+until it reaches its maximum value, EFmax , corresponding to a critical soil
+moisture value, θcrit , which lies between the permanent wilting point, θwilt ,
+and field capacity, θf c (Seneviratne et al., 2010). For soil moisture values
+above θcrit evapotranspiration is energy limited, while for values less than
+θcrit evapotranspiration is soil moisture limited. When soil moisture falls
+below θwp evapotranspiration cannot take place. This gives rise to a transitional zone, θwilt ≤ θ ≤ θcrit , where soil moisture directly constrains evapotranspiration and, therefore, provides feedbacks to the atmosphere through
+its impact on the partition between sensible and latent heat (?Seneviratne
+et al., 2010).
+
+Figure 5.1: Conceptual diagram showing soil moisture and energy limited
+evapotranspiration regimes (Seneviratne et al., 2010)
+.
+In addition to its effect on the Bowen ratio, soil moisture lowers the surface albedo which increases the fraction of solar radiation absorbed by the
+Earth’s surface. In transitional regimes these two effects may influence near
+surface air temperature and precipitation patterns (Seneviratne et al., 2010),
+illustrated by Figure 5.2. When the latent heat flux at the Earth’s surface is
+limited by soil moisture more energy is available for sensible heating, causing the air temperature to rise (Seneviratne et al., 2010). This has been
+observed in several locations including North and South America (e.g. ?),
+
+51
+
+India (e.g. Roy et al., 2007) and Europe (e.g. Seneviratne et al., 2006). The
+relationship between soil moisture and rainfall, which will be the focus of
+this study, is more complex. Early studies investigated whether the proportion of rainfall supplied by regional evapotranspiration increased with
+soil moisture (e.g. ??). However, recent work has established that the main
+impact of soil moisture on precipitation relates to its effect on the stability of the planetary boundary layer (e.g. ????Lo and Famiglietti, 2013).
+Conceptually, more evapotranspiration from the Earth’s surface increases
+moist static energy in the planetary boundary layer, resulting in convective
+instability which, in turn, leads to increased precipitation by driving local
+moist convection (?). This explanation is mainly supported by modelling
+studies (e.g. ??Lo and Famiglietti, 2013), but some observational evidence
+exists for the Sahel region in Africa (??). However, alternative modelling
+experiements have indicated that under certain conditions dry soils cause
+greater convective instability than wet soils (e.g. ??), highlighting the complexity of the feedback mechanism. The nature of the feedback mechanism
+between soil moisture and precipitation in northern India will be discussed
+in greater detail in the following sections.
+
+(a) Soil moisture-temperature
+
+(b) Soil moisture-precipitation
+
+Figure 5.2: Soil moisture-atmosphere feedback mechanisms (Seneviratne
+et al., 2010)
+
+5.1.3 Role of vegetation in soil moisture feedbacks
+The biosphere is the main interface between soil moisture and the atmosphere (??). Consequently, land cover and its temporal dynamics have im-
+
+52
+
+portant effects on the interaction between the two domains (??Feddema,
+2005). These may be caused by biogeochemical processes, which alter the
+chemical composition of the atmosphere by affecting the land surface carbon flux, or biogeophysical processes, which alter the surface energy and
+water balances by changing the surface albedo and Bowen ratio (Feddema,
+2005). Surface albedo determines the total energy available at land surface
+(??). Forests tend to have an albedo between 0.09 and 0.18, while for cereal
+crops the value typically lies between 0.18 and 0.25 (?). Plant physiology
+affects the Bowen ratio by influencing the rate of transpiration (?). Canopy
+structure provides a further control on Bowen ratio through its effect on interception and bare soil evaporation, as well as influencing surface roughness,
+which affects the transfer of momentum from the surface to the atmosphere
+(??). Irrigation, a secondary effect of land cover change, affects the surface
+water balance and, therefore, alters the Bowen ratio (?). It may also affect
+the surface albedo both directly, by increasing the amount of water land
+surface, and indirectly, by altering the physical characterisitics and seasonal
+dynamics of crops (Seneviratne et al., 2010).
+
+5.1.4 Assessing the impact of the land surface on the South
+Asian monsoon
+Early modelling experiments by ? used six atmospheric general circulation
+models (AGCMs) to investigate the impact of the land surface of continental
+India on the mean strength of the Asian monsoon. The models consistently
+associated strong monsoons with positive soil moisture anomolies and higher
+land surface temperatures, confiming the results of previous global and regional sensitivity studies investigating the impact of soil moisture (???) and
+surface albedo (??) on precipitation. Limitations of these early modelling
+experiments include the coarse spatial resolution and the simplistic representation of the land surface used by the AGCMs. First generation land surface
+models, such as those used by ?, use a simplistic conceptual bucket model to
+represent soil moisture that cannot adequately represent the complexity of
+the soil system. Furthermore, since these models do not include a physically
+based representation of plants, the biophysical control on surface albedo,
+momentum transfer and evapotranspiration is neglected (?). Nevertheless,
+
+53
+
+based on the modelling results ? hypothesised that strong rainfall in the
+early stage of the monsoon could initiate a positive soil moisture feedback
+loop that would sustain rainfall throughout the middle and late stages even
+when the large scale temperature gradient between the land and the ocean,
+the fundamental mechanism driving the formation of the monsoon (Turner
+and Annamalai, 2012), decreased.
+Several studies of GLACE (?Koster et al., 2006; Guo et al., 2006), based
+on an ensemble of twelve atmospheric general circulation models, identified northern India, the Sahel region in Africa and central North America
+as global "hot spots" of soil moisture-precipitation coupling strength during
+the boreal summer. In the experiment, each participating AGCM performed
+three ensembles of 16 simulations of the boreal summer under different conditions to isolate the effect of soil moisture on rainfall within the model. The
+coupling strength was determined through a diagnostic measure based on
+the variance of precipitation between simulations (?). Results from GLACE
+show that models with a strong link between soil moisture and the surface
+energy budget, and between the surface energy budget and precipitation, had
+more explanatory power than models with weak representations of either of
+these two components, supporting the hypothesis that interactions between
+the land and atmosphere are significant. Local moist convection, which
+is initiated by variations in moist static energy in the planetary boundary
+layer, was identified as an important process relating soil moisture to rainfall, whereas large scale condensation controlled by variations in the global
+circulation is less important (Guo et al., 2006).
+The GLACE experiment demonstrates that while multimodel projects can
+identify certain basic processes where there is broad model agreement, comparing individual models shows a wide range of sensitivity of climate to soil
+moisture (Seneviratne et al., 2010). Guo et al. (2006) considered the feedback mechanism in terms of the effect of soil moisture on evapotranspiration
+and the effect of evapotranspiration on precipitation. This division showed
+that while some variability could be explained by the range of model sensitivity of convection to evapotranspiration, the most important factor is
+the different land surface parameterisation schemes within the models, particularly in the way that the relative contribution of tranpiration, bare soil
+
+54
+
+evaporation and canopy interception loss is determined in soil moisture limited evapotranspiration regimes. The Project for Intercomparison of Land
+surface Parameterisation Schemes (PILPS) (e.g. ??) demonstrated that different land surface models forced with the same climatological variables and
+with identical values of land surface parameters produced markedly different results in terms of the surface energy and water balance (?). Results
+from the Land-Use and Climate, IDentification of robust impacts (LUCID)
+experiment (?Guo et al., 2006; Pitman et al., 2009), which used seven climate models to isolate the effects of land cover change on regional and
+global precipitation patterns, show that land surface models follow different
+assumptions about the physical characteristics of land cover and land use
+types, causing model outputs to differ markedly.
+? draw attention to the difficulty in relating the results of ensemble model
+comparisons to physical quantities from observed datasets. This is made
+more difficult by the lack of global observed datasets of model outputs such
+as soil moisture and evapotranspiration (??Seneviratne et al., 2010). Moreover, establishing the direction of causality from observed datasets of soil
+moisture and precipitation is difficult because the impact of precipitation
+on soil moisture is likely to dominate the relationship between the two variables (Seneviratne et al., 2010). ? point out that in some cases soil moisture
+feedbacks could equally be explained by the internal variability of precipitation, through processes such as the Madden-Julian oscillation (??), which
+is known to be important in the Asian monsoon circulation (??). Alternatively, an additional variable, such as sea surface temperature, may falsely
+suggest the existence of strong feedbacks between soil moisture and precipitation by affecting both these variables (??). Several studies investigating
+soil moisture-precipitation feedbacks over the midwest United States, identified as a global hot spot by GLACE, have failed to provide empirical evidence that soil moisture affects precipitation patterns in this region (e.g.
+???), highlighting the level of model uncertainty regarding soil moistureprecipitation feedbacks.
+The lack of agreement between models is particularly problematic for
+northern India where there is large uncertainty about the direction, magnitude and spatial pattern of future changes to monsoon rainfall (??). Pitman
+
+55
+
+et al. (2009) identified the lack of a common land cover change dataset to
+force the models as a major contributor to model uncertainty about the
+impact of historic land cover change on precipitation. In many regions this
+is exacerbated by the limited availability of remotely sensed observations
+at sufficient temporal extent and resolution to detect land cover change
+(?). Uncertainty also arises from the different land surface parameterisation
+schemes implemented by global climate models (Pitman et al., 2009). This
+problem is made worse by the fact that these models cannot be calibrated to
+local conditions as land surface state variables evolve in response to model
+output. This is relevant to northern India where processes such as irrigation,
+which are not represented in global climate models, are known to be important (??). To overcome this problem global climate models can be forced
+with the output of offline, high resolution, physically based hydrological
+models driven by observed meteorological data and calibrated againsts local
+observed hydrological data (Seneviratne et al., 2010). Given the scarcity of
+observed data available for northern India, it is necessary to develop methods that utilise remote sensing data for this purpose.
+
+5.1.5 Summary
+The green revolution in India has driven substantial environmental change.
+The revolution has enabled India to become self sufficient in food grains
+(Singh, 2000), however, it has also caused widespread land cover change and
+a marked increase in the exploitation of water resources (Shah et al., 2006;
+Roy et al., 2007; Scott and Sharma, 2009). The pressure on water resources
+in India is likely to increase with forecasted population growth and continued economic progress. Moreover, climate change may increase the erratic
+behaviour of the Asian summer monsoon, presenting a significant risk to
+regional water supply (?).
+Land cover change and changing irrigation practices may affect the water
+resources and fluxes in northern India in complex ways. Further, there is evidence of feedbacks between soil moisture and precipitation. Soil moisture,
+which is strongly influenced by land cover (??), affects the partition of sensible and latent heat and the albedo at the Earth’s surface (??Seneviratne
+
+56
+
+et al., 2010). Conceptually, this may influence precipitation by increasing
+the moist static energy in the planetary boundary layer, driving local moist
+convection (e.g. ?). However, the feedback mechanism is complex and some
+modelling studies have shown that convective instability is stronger over dry
+soils (??). Nevertheless, several studies of Global Land-Atmosphere Coupling Experiment (GLACE) (?Koster et al., 2006; Guo et al., 2006), based
+on twelve atmospheric general circulation models, identified northern India
+as a "hot spot" of soil moisture-precipitation coupling strength during the
+boreal summer. However, while there is broad agreement between the global
+climate models about the basic feedback mechanism, comparing individual
+models shows a wide range of sensitivity of climate to soil moisture (?Guo
+et al., 2006; Pitman et al., 2009). Consequently there is a lack of understanding about the impact of land cover change on regional water resources
+and climate.
+In northern India there is large uncertainty about future changes to the
+Asian summer monsoon (??), which supplies approximately 70% of regional
+rainfall (Thenkabail et al., 2005). There is a need, therefore, to improve the
+ability of models to simulate historical trends in order to reduce the uncertainty associated with future predictions. Pitman et al. (2009) identifies the
+lack of a common land cover change dataset to force the models as a major
+contributor to the uncertainty about the impact of historic land cover change
+on rainfall. While a number of global and regional land cover products are
+available (e.g. ?Loveland et al., 2000; Friedl et al., 2002), none provide information about land cover change in northern India over the study period.
+Land use change models can be used to extrapolate land cover back in time
+(?). One such model, CLUE-s (?Verburg and Veldkamp, 2004), simulates
+the spatial pattern of land cover change based on spatially explicit, static
+and dynamic driving factors and non-spatial estimates of land cover area. A
+further source of uncertainty arises from the different land surface schemes
+implemented by different climate models (?Pitman et al., 2009), which is
+exacerbated by the fact that these models cannot be calibrated to local conditions. To overcome this problem global climate models can be forced with
+the output of offline, high resolution, physically based hydrological models,
+calibrated against local observed data (Seneviratne et al., 2010). However,
+this has not been attempted for northern India.
+
+57
+
+In this study...
+
+5.2 Materials and methods
+5.2.1 Study region
+The Ganga basin in northern India.
+
+5.2.2 JULES
+Description of the JULES land surface model.
+
+5.2.3 Input data
+Land cover
+Historical land cover data...
+
+Meteorological data
+JULES requires precipitation and temperature data...
+Ancillary data
+Soil data from the Harmonised World Soil Database
+
+5.2.4 Procedure
+The JULES model was run for the period 1970–2005. Soil moisture was
+retrieved from the output files...
+
+5.3 Results
+TODO
+
+58
+
+5.4 Discussion
+TODO
+
+5.5 Conclusion
+TODO
+
+59
+
+6 Model coupling
+Integrated environmental modelling...
+
+6.1 Literature review
+Hydrological models provide a representation of the hydrology of a catchment or other spatial entity to make project about its response to future
+scenarios or simulate the behaviour of places where no output variables are
+measured (Beven, 2001). Hydrological modelling is often used to inform water resources management decisions... Scientific hydrology is concerned with
+improving our understanding of hydrological systems. The advent of new
+technologies such as distributed computing and the Semantic Web, combined with the ever-expanding volume of environmental data, will change
+the way that models are built and used (Beven, 2007; Salas et al., 2012;
+?). Alongside the scientific challenge of designing adequate workflows to
+answer specific questions is the technical challenge of implementing them efficiently (?). Data processing languages, especially R (R Core Team, 2015)
+and Python, are quickly gaining popularity because they combine a wide
+array of functionality with high flexibility and versatility. In this paper, we
+explore how handling and processing of hydrological data in R can be facilitated further by designing and implementing a set of relevant classes and
+methods in the experimental R package RHydro.
+Numerous hydrological models have been developed to tackle a wide variety of scientific questions, including empirical, data-driven models, spatially
+lumped and semi-distributed conceptual models and distributed, process
+based models based on equations describing physical processes. Processbased models have variously been referred to as physics-based or physicallybased models; however, since all hydrological models include simplifications
+
+60
+
+of the actual physics, “process-based" more accurately describes the modelling approach (Montanari and Koutsoyiannis, 2012; Beven and Young,
+2013). Hydrological modelling is subject to a large amount of uncertainty
+from various sources (). The main types of uncertainty encountered in hydrology are aleatory uncertainty, referring to apparent random variability of
+the system (Beven and Young, 2013), and epistemic uncertainty, resulting
+from a lack of knowledge either about the appropriate model structure and
+parameter set to adequately represent a hydrological system or about the
+input data and response data used to evaluate model performance Beven
+et al. (2015). Uncertainty analysis is used to identify sources of error and
+uncertainty within a modelling application (Buytaert et al., 2008). Various
+techniques are used, ranging from the Generalised Likelihood Uncertainty
+Estimation (GLUE) framework ?, based on the subjective assessment of
+whether or not a model has predictive skill (“behavioural" in the terminology of ?), to formal statistical frameworks in which uncertainty is treated
+as a probabilistic variable (Beven et al., 2011).
+According to Buytaert et al. (2008), there should be two main outcomes
+of uncertainty analysis. Analysis of epistemic uncertainty, to the extent that
+it can be isolated, should identify processes and systems that are poorly understood and drive the collection of new or more accurate data and study
+of specific processes. The second outcome should be to translate knowledge to the model software. While the first step has received considerable
+attention in recent years (), there has been relatively little progress in reducing epistemic uncertainty and improving hydrological models (Buytaert
+et al., 2008; Gupta et al., 2012; Weiler and Beven, 2015). The various data
+streams now available to hydrologists provides the opportunity to explore
+gaps in knowledge and develop new hypotheses about hydrological processes
+and systems ?. For example, recent field scale experiments, yielding isotopic
+data from various sites, have led to new hypotheses about the partition
+of water in the critical zone between plant transpiration and groundwater
+recharge and streamflow (?Evaristo et al., 2015). However, it is still the case
+that representations of many physical processes in models are contradicted
+by field experiments (e.g. McDonnell et al., 2007). In particular, the DarcyRichards equation (?), widely used in process based hydrological models
+and land surface schemes to simulate unsaturated flow in soils (Beven and
+
+61
+
+Germann, 2013), was derived at laboratory scale under conditions that are
+not generally found in the field (Beven et al., 2012; Beven and Germann,
+2013). As a result, physically based models are also calibrated to account for
+spatial heterogeneity, nonlinearity of hydrological processes and interaction
+between processes at various scales (McDonnell et al., 2007; Gupta et al.,
+2012).
+Where uncertainty analysis can be carried out under the constraints of
+a single, fixed model structure, it can also address the uncertainty in the
+particular choice of a model structure by considering multiple models as
+working hypotheses (Buytaert and Beven, 2011; Clark et al., 2008, 2011).
+While there have been several comparison studies of hydrological models
+(e.g. ), they have largely failed to diagnose differences in model performance
+in terms of individual model components because the structure and implementation of different models varies so widely (Kampf and Burges, 2007;
+Clark et al., 2011, 2015a). This problem is exacerbated by the fact that
+it is hard to resolve structural deficiencies in calibrated models because of
+problems arising from equifinality, or the notion that for a given place various model structures and parameter sets are capable of simulating response
+variables equally well (Kirchner, 2006; Beven, 2006; Beven et al., 2012).
+While conceptual and process-based models are commonly seen as hypotheses about the functioning of a catchment (e.g. ?Buytaert and Beven,
+2011; ?), according to Clark et al. (2011) hydrological models are more accurately viewed as a collection of coupled hypotheses about different aspects of
+the hydrological system. These component hypotheses cannot necessarily be
+tested at the level of the system as a whole because of potentially complex
+relationships between the constituent parts. In order to test hypotheses it
+is therefore necessary to isolate model subcomponents. Furthermore, evaluating multiple working hypotheses requires components of different model
+structures to represent exactly the same process. This is challenging because
+model developers make different decisions about model fidelity, complexity
+and practicality (see Clark et al. (2015a) for definitions of these terms) as
+well as data availability, reflecting the diversity of members of the hydrological modelling community in terms of “background, experience and modelling
+philosophy". Consequently it is often difficult to isolate specific process rep-
+
+62
+
+resentations in different models so that hypotheses can be properly tested
+(Clark et al., 2011). Under these circumstances the attribution of sources of
+uncertainty is itself uncertain.
+Progress in scientific hydrology is further impeded by current modelling
+practice (Buytaert et al., 2008). Efficient model development strongly depends on the availability of model implementations as free and open source
+software (Morin et al., 2012; Pebesma, 2012; Steiniger and Hunter, 2013;
+Moulds et al., 2015). The fact that many hydrological models are released
+as closed-source software packages is a fundamental impediment to scientific
+progress. From the point of view of model development closed source software packages are effectively black boxes with no way of knowing model implementation details. Even if models are perfectly described it is impossible
+to guarantee the reproducibility of model results unless the implementation
+details, including the model source code, is freely available (Ince et al., 2012).
+Moreover, it forces the duplication of work (). Model implementations are
+frequently platform dependent, with many hydrological models only available for certain operating systems, often Windows (Buytaert et al., 2008).
+This makes it difficult for hydrologists to exploit high-performance computing facilities that are increasingly necessary to investigate feedbacks between
+the hydrological cycle and global and regional environmental change. In addition, it is harder to compare different models, particularly in the context
+of models as working hypotheses (Clark et al., 2011).
+As a result of these issues model development has occurred on an ad-hoc
+basis, relying on the efforts of individuals and research groups, rather than
+a systematic effort by the entire hydrological modelling community (Buytaert et al., 2008; Clark et al., 2015a; Weiler and Beven, 2015). Recognising
+these issues, members of the community have recently started to question
+whether a new approach to hydrological modelling is required (e.g. Clark
+et al., 2015c; Weiler and Beven, 2015). The Structure for Unifying Multiple
+Modeling Alternatives (SUMMA) (Clark et al., 2015c,b) is a free and opensource project to develop a unified framework for developing hydrological
+models. The main aim of SUMMA is to facilitate the development and comparison of multiple model structures as hypotheses about the functioning of
+hydrological systems. To achieve this aim it provides several interchangeable
+
+63
+
+model components to represent different aspects of the hydrological system
+(see (Clark et al., 2015b) for an overview of the various model components).
+Recently, Weiler and Beven (2015) discussed the need for a community hydrological model following many land surface schemes. It is noteworthy
+that land surface models, increasingly used in hydrology despite considerable shortcomings (Beven and Cloke, 2012; Clark et al., 2015a), are usually
+implemented and released... They also have active development cycles and,
+usually, a formal means for users to contribute to model development. This
+could be one reason for calls amongst the hydrological community to focus development activities on land surface models (e.g. Wood et al., 2011;
+Nazemi and Wheater, 2015).
+The need for a common interface amongst hydrological models is not limited to uncertainty analysis and the reduction of epistemic uncertainty. The
+focus of the current IAHS Scientific Decade (Panta Rhei-Everything Flows
+Montanari et al., 2013) is to improve the predictive capacity of hydrological models for sustainable water resources management in the context of
+rapid environmental and social change. This requires scientific workflows
+that include human-environment interactions (Laniak et al., 2013; Nazemi
+and Wheater, 2015; Wheater and Gober, 2015). Integrated environmental
+modelling is a systems approach where various models and data are combined to address specific questions related to environmental management
+and assessment (?Laniak et al., 2013). It brings together the knowledge and
+expertise of various scientific communities and, in doing so, increases the
+collective knowledge of the system (Laniak et al., 2013). The nascent discipline of socio-hydrology is concerned with understanding the interactions
+and feedbacks between coupled human-water systems in order to improve
+the resilience and sustainability of these systems under environmental and
+social change (?). It recognises that the quantity and quality of water resources is no longer governed entirely by natural processes but increasingly
+by humans and society who depend on water for their livelihoods and survival ().
+Socio-hydrological modelling provides insight into the mechanisms and
+drivers of human-water interactions, make future predictions and support
+decision-making and policy development (?). Modelling coupled human-
+
+64
+
+water systems is challenging for the same reasons that traditional hydrological modelling is challenging, as well as inheriting the challenges associated with modelling social systems. Socio-hydrological modelling is subject to great uncertainty (Blair and Buytaert, 2016). Blair and Buytaert
+(2016) discusses various approaches to socio-hydrological modelling, including agent-based modelling, system dynamics, pattern-oriented modelling,
+Bayesian networks, coupled-component modelling, scenario-based modelling
+and heuristic/knowledge based modelling. Of particular relevance to the current discussion is coupled-component modelling, which, according to Blair
+and Buytaert (2016) is... As Blair and Buytaert (2016) rightly points out,
+... However, all models can to some extent be broken down into components... Particularly in socio-hydrological modelling, where there are high
+levels of uncertainty arising from multiple sources, it is beneficial to implement models as component-based models so that the uncertainty can be
+effectively communicated... (Clark et al., 2011, 2015c,b). Particularly in
+socio-hydrological modelling, where model-building is an important..., the
+separation of models into components is desirable to facilitate model building
+and the testing of different model structures, both in terms of the processes
+included in the model as well as the way in which processes are represented,
+as hypotheses of the system ().
+Representing complex systems in a single model structure is both challenging and undesirable (Beven, 2007). Instead, model coupling has emerged
+as an effective way to build integrated environmental models ?. According
+to ? there are three main approaches to model coupling. Firstly, ... This
+practice is adopted by earth system models, which consist of tightly coupled model components representing atmosphere, oceans, land and sea ice
+(Valcke et al., 2012). However, in water resources management there is a
+need for a flexible approach to model coupling because of the diverse range
+of problems encountered (?). Manually changing the source code, a necessary requirement of this approach (), is simply not practical for a range of
+problems because it is time consuming and requires a high level of ability in
+specific programming languages and techniques (?). Moreover, while model
+coupling is included in the activities of the core development team in the
+case of land surface models (), this is not standard practive in hydrological models and therefore modifying the source code potentially removes the
+
+65
+
+model from the development cycle (). Thus, as (?) argues, loose model coupling by passing input and output data between models is more appropriate
+for hydrological applications. The object-oriented nature of data processing
+langauges such as R and Python makes them an efficient means to couple
+models and applications written in compiled languages (?Tsarouchi et al.,
+2014; Garcia et al., 2016).
+The need for couplers was first addressed by the climate modelling community to couple separate components of earth system models. In this context several model coupling frameworks have been developed, including the
+Earth Systems Modeling Framework... These frameworks are designed to
+optimise model performance and run on supercomputers. In hydrology, the
+Open Modeling Interface (OpenMI) () was developed to... Current modelling frameworks (OpenMI, ...) Component-based frameworks consist of
+model components that follow a standard component interface to ensure that
+different components within the same framework interact correctly (Valcke
+et al., 2012). The Earth System Modelling Framework (Hill et al., 2004) is
+a component-based modelling framework developed to build complex earth
+system models (). It has been applied to [...] (e.g. Keller et al., 2014) ESMF
+provides generic component interfaces [...] These frameworks are designed to
+be run on supercomputers and, as such, [...] steep learning curve [...] There
+are limited applications of these couplers to hydrology [...] ...Shrestha et al.
+(2014) coupled the Community Land Model, ParFlow and COSMO using
+the OASIS3 coupler [...]
+Several tools have been developed to facilitate integrated environmental
+modelling. The Open Modelling System ()... OpenMI supports temporal
+and spatial disaggregation to ensure model components operating at different temporal and spatial resolutions [...] (Blind and Gregersen, 2005)
+OpenMI was originally designed to operate on Windows [...] support for
+other platforms is variable: it has been ported to Linux, although, according
+to the project website, it is only tested on one Linux distribution (OpenSUSE 11.0, 64-bit) while Mac-users (?) To port OpenMI to Linux the Mono
+compiler [...] "Mono compiler does not support parallel computing" Furthermore, it is unclear whether the development cycle for the Linux version
+follows that of the main Windows version. [...] For an existing model to
+
+66
+
+be OpenMI-compliant it is necessary to represent the model as a C# class
+implementing a set of operations defined by the OpenMI standard (). This
+is relatively straightforward if the original model is written in a supported
+language (.NET, C#) (). Bearing in mind that the typical OpenMI users are
+scientists, not programmers, this can be non-trivial (?Lu and Piasecki, 2012).
+The UncertWeb framework... ().
+
+6.1.1 The R system
+The R environment for statistical computing (R Core Team, 2015) is a free
+and open source implementation of the S language (Chambers, 2008) which
+compiles and runs on a wide variety of Unix platforms, Windows and MacOS (). One of the main strengths of R it its support for extension packages, which are distributed through the Comprehensive R Archive Network
+(CRAN) and other repositories. On submission, and on a daily basis thereafter, CRAN packages must pass a series of rigorous tests designed to check
+the code and documentation is consistent, complete and free of common
+problems. Several package development tools are available, ensuring: “the
+step from being a user to becoming a developer is small with R" (Pebesma,
+2012). As of November 2015 the CRAN repository contains approximately
+7500 packages. Package discovery is made easier by CRAN Task Views
+(https://cran.r-project.org/web/views/), which provide an overview
+of packages and functions useful for a certain topic.
+The development of R is strongly established in the areas of statistical
+software and data analysis (Chambers, 2008). It includes several classes for
+representing time and sophisticated methods for time series analysis through
+contributed packages such as zoo and xts (). The sp package provides
+dedicated classes and methods for representing different types of spatial
+data... analyzing spatial data (Bivand et al., 2013), and spatio-temporal
+data (Pebesma, 2012). The ability to handle spatial and spatio-temporal
+data includes going from one representation to another (regridding, aggregation, disaggregation), but also geostatistical interpolation and stochastic
+simulation (Pebesma, 2004). Package rgdal (Bivand et al., 2014), which provides an interface to the GDAL and OGR libraries, ensures interoperability
+
+67
+
+with most spatial raster and vector file formats and provides transformation between spatial reference systems through the PROJ.4 cartographic
+projections library (). Package raster (Hijmans, 2014) provides classes and
+methods for analysis of raster data. In addition, R offers topological manipulation of geometries (?), as well as analysis of network data (Csardi and
+Nepusz, 2006).
+R provides functionality for high-performance and parallel computing
+with, for instance, convenient interfaces to run R process on Hadoop clusters. Running R on Amazon Web Services is also straightforward (). It
+offers a large range of low-level to high-level plotting facilities that can
+be sent to a wide range of graphics devices (screen, file formats) or dynamic web interfaces (?). It also contains packages for parsing data from
+the web such as RCurl and SSOAP (https://cran.r-project.org/web/
+views/WebTechnologies.html). With these low-level packages, several highlevel packages are available to provide convenient interfaces to specific data
+sources. Table X lists some high-level packages for retrieving meteorological
+and hydrological data from the web.
+Table X lists current R packages for hydrological data analysis and modelling. Some hydrological models have been implemented in R... Wasim,
+Topmodel, Dynatopmodel, TUWmodel. SPEI and Hydrome model part of
+the hydrological cycle. The hydromad package... A package for the transfer of available as an R package allowing hydrological data discovery and
+sharing from the R console. These packages typically perform a certain part
+of hydrological workflows. With RHydro we do not intend to replace existing functionality, nor do we attempt to provide a platform for developing
+new hydrological models (). Rather... and provide a means to improve the
+interoperability of existing packages for hydrological data analysis.
+In some cases the original model code has been wrapped in a relatively
+high-level language such as R and Python. For example, both Topmodel
+and Dynamic Topmodel are available as R packages. This provides a more
+user-friendly model interface and makes it easier to handle input/output and
+visualise model results.
+
+68
+
+6.1.2 Summary
+TODO
+
+6.2 Design goals
+TODO
+
+6.3 Controlled vocabulary
+A controlled vocabulary... n ontology is “a representation of the knowledge
+within a domain of interest" (Madin et al., 2007), to describe and synthesize
+data elements from diverse sources (Shadbolt et al., 2006). They provide
+a means to describe data in a consistent way. In hydrology, the controlled
+vocabulary of the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) is part of its Hydrologic Information System... The
+decision to support a controlled vocabulary was motivated by... Semantic
+Web and open data. Although the technology is still immature...
+Package RObsDat () provides a convenient interface to the CUAHSI
+web services. Figure X shows how to make the CUAHSI controlled vocabulary available within the current R session and update the various tables
+from the CUAHSI web service. The getMetadata() function in RObsDat
+allows users to search for particular terms in the controlled vocabulary tables. The complete ontology can be viewed at http://his.cuahsi.org/
+mastercvreg.html, where members of the community can also submit new
+terms.
+WaterML is an XML dialect for representing hydrological time series data
+(). The current version, WaterML 2.0, is an open standard of the Open
+Geospatial Consortium (OGC) (). An R package, WaterML, allows R
+users to interact with the CUAHSI...
+
+69
+
+6.4 Object-oriented programming
+“Object-oriented programming is based on two important concepts, abstraction and encapsulation. We want to represent the microarray concept in a
+way that makes sense to the users without distracting them with unnecessary technicalities... We want the users to comprehend microarrays in R like
+they know them in real life i.e. manipulate the abstract concept microarray
+while keeping all the underlying technical details, the implementation, hidden, or encapsulated"
+
+6.5 Classes and methods for hydrological data
+The RHydro package follows an object-oriented design using the S4 system
+(Chambers, 2008). This system provides... It is strongly inspired by the
+spacetime package (Pebesma, 2012).
+
+6.5.1 Classes
+The RHydro package is built on three classes representing different spacetime geometries: HydroSTF, HydroSTS and HydroSTI. These classes inherit
+from spacetime classes STF, STS and STI, which all derive from base class
+ST (Pebesma, 2012) and, similarly, are not designed to represent actual data.
+They include additional slots z and endz, analogous to time and endTime
+attributes in class ST, to define depth profiles. This is important for hydrological and meteorological variables measured and simulated at specific
+vertical levels above or below the earth’s surface (soil moisture, wind speed,
+for example). Classes derived from HydroSTF, HydroSTS and HydroSTI
+include slots data to represent data in various formats and metadata to
+describe the data using entries from the CUAHSI controlled vocabulary.
+Objects belonging to these classes should represent a single hydrological
+variable.
+Class HydroSTF represents the geometry of data with a full space-time
+grid, which means that for n spatial features, which may be points, lines,
+polygons or grid cells, and m time points, n ∗ m data points are available
+
+70
+
+(Pebesma, 2012). Three derived classes of HydroSTF include data in different formats:
+HydroSTFDF objects store data as a data.frame in long format with columns
+representing depth profiles. This contrasts with STFDF objects from
+spacetime where columns are assumed to refer to separate variables.
+HydroSTF.raster objects represent spatially gridded data stored as a RasterStack object from package raster. For a geometry with m time points
+and p depth profiles the RasterStack has m ∗ p layers with depth cycling fastest. The number of spatial features equals the number of cells
+in the RasterStack object.
+HydroSTF.array objects, which also represent spatially gridded data, store
+data an array with four dimensions (time, x, y, z).
+Of these derived classes HydroSTFDF is the most flexible because it can
+represent all spatial feature types. A typical use of this class would be to
+represent precipitation data collected over regular time intervals by a network of rain gauges. Classes HydroSTF.raster and HydroSTF.array should
+be used to represent spatially gridded data products such as those derived
+from remotely sensed data or the output of distributed hydrological models.
+Class HydroSTS represents data on a sparse space-time grid. This is similar to a full space-time grid except only non-missing data is stored. In these
+objects, an index [i,j] is associated with each data value giving the spatial
+feature i and time point j to which it belongs. This layout can be more
+efficient than a full space-time grid under various circumstances described
+by Pebesma (2012). Data is included as a data.frame in the derived class
+HydroSTSDF. Data suited to this layout include the activation of flood defence systems or rainfall data in regions with extended dry spells.
+Where the first two classes represent lattice layouts, in which spatial features have data values for multiple time points, class HydroSTI represents
+an irregular layout in which there is no defined space-time grid. In this case
+the number of data points equals n spatial features and m time points such
+that a data value k is associated with spatial feature k and time point k.
+Objects inheriting from HydroSTI therefore include a spatial feature and
+
+71
+
+point for each data value. Hydrological data with an irregular space-time
+layout include... It can also be used when the structure of a data set is
+unknown and then promoted to HydroSTF...
+The HydroST* classes are designed to represent single hydrological variables. The HydroCatchment is a container class for data and information
+covering a region of interest. Slots area and network represent physical characteristics of a hydrological characteristics. These slots may be set to Null if
+the data are missing or irrelevant. Slot outlet should be used to represent...
+Hydrological models are represented by the HM class. The HM class provides an entry point for users and developers to define methods for hydrological models. The procedure is to define a subclass of HM that is specific to
+the model or process in question. This should include a validity function to
+ensure the object contains the correct data content and format. Individual
+models should be represented by derived classes inheriting from class HM.
+It is included solely for the purpose of providing users and developers with
+a class to extend to represent individual models.
+
+6.5.2 Methods
+Methods for the RHydro data classes are shown in Table X. Several methods
+are written for generic functions defined in other packages or base R for
+manipulating spatial, temporal or spatiotemporal data. In the following
+examples we use simple, artificial data objects to illustrate the key methods.
+Creation
+Constructor functions HydroSTF, HydroSTI and HydroSTS create objects
+belonging to the respective classes. The class of the data argument, if provided, determines the derived class of the returned object. For example, if
+data is a RasterStack object, the constructor function will return an object
+of class HydroSTF.raster. In the following toy example we create objects objects x and y with classes HydroSTFDF and HydroSTF.raster, respectively.
+We first create the space and time geometries:
+
+72
+
+Then, we generate some arbitrary data drawn from a random uniform
+distribution and create an object of class HydroSTFDF:
+To create an object of class HydroSTF.raster we generate a RasterStack
+object and pass this to the constructor function:
+Note that in this case we do not need to supply a Spatial object to the
+constructor function because this information can easily be derived from the
+RasterStack object.
+
+6.5.3 Querying
+Various methods allow the user to query the spatial and temporal characteristics of Hydro objects. Some of these are shown below:
+Coercion
+Coercion methods make it easier to take advantage of methods defined
+for objects of different classes. Objects of class HydroSTF.raster and HydroSTF.array can always be coerced to HydroSTFDF objects, however, the
+reverse operation is only possible if the HydroSTFDF object is gridded.
+The function as.spacetime converts objects inheriting from HydroSTF, HydroSTS, HydroSTI to their nearest equivalent spacetime classes (e.g. HydroSTFDF, HydroSTF.raster and HydroST.array become STFDF). Then,
+the coercion methods defined in spacetime can be applied. Some examples
+are shown here:
+Indexing
+Indexing allows users to extract or replace subsets of HydroST objects.
+Methods for HydroSTF, HydroSTS and HydroSTI objects closely follow
+those for the corresponding spacetime classes described by Pebesma (2012).
+Individual raster objects can be extracted from HydroSTF.raster objects using double brackets, as follows:
+Index methods for HydroCatchment objects are designed to extract or
+replace objects held in the data slot. The index can be either be numeric or,
+if the objects have metadata entries, a character vector of variable names to
+be selected. Double brackets are used to select a single data object whereas
+single brackets can select one or more objects.
+
+73
+
+Arithmetic and mathematical functions
+Arithmetic and mathematical methods for HydroST objects allow them to
+be used in calculations. A full list of supported operations is provided in
+the package documentation. Objects of the same derived class can be supplied to arithmetic operators if they have the same spatial and temporal
+characteristics. For example:
+Numeric, Spatial and time-based objects can also be supplied.
+
+Aggregation and overlay
+Methods for aggregation and overlay of Hydro objects... For objects of
+classes HydroSTFDF, HydroSTIDF and HydroSTSDF aggregation and overlay methods are thin wrappers to the methods for objects of corresponding
+spacetime classes, as described in Pebesma (2012). Gridded HydroSTF
+objects can additionally be aggregated to a lower spatial resolution by taking advantage of the aggregate method defined in packge raster. In this
+case, gridded HydroSTFDF and HydroSTF.array objects are coerced to HydroSTF.raster objects, aggregated, and coerced back again. Some examples
+of aggregation and overlay are shown here:
+TODO
+
+6.5.4 Visualisation
+Visualisation is an important tool in hydrological data analysis, ...
+
+6.6 Example applications
+In this section we present two example applications of the RHydro framework. In the first case we show how RHydro facilitates the use of Topmodel
+(Beven and Kirkby, 1979), a well known hydrological model, to simulate
+discharge in the Wye catchment in mid-Wales.
+
+74
+
+6.6.1 Plynlimon
+The Plynlimon research catchments... The original data set was obtained
+from the Centre for Ecology and Hydrology. A package vignette shows how
+to download the raw data files from https://github.com and create a single STFDF object containing observed meteorological data from a network
+of automatic weather stations. Having created such an object, a version
+of which is included with the package, it is straightforward to create HydroST objects representing individual variables, as shown in Figure Y. If
+the CUAHSI controlled vocabulary is made available by implementing the
+code in Figure X the validity of the metadata entries for the HydroST objects is checked automatically: invalid entries result in an error.
+
+Evapotranspiration
+Topmodel requires reference evapotranspiration for each time point in the
+simulation (). Associating each data object with metadata entries from a
+controlled vocabulary allows users to write functions that checks the data
+object contains the correct variable. To illustrate how this can be done in
+practice we have developed an experimental package FAO56 which implements several equations from the Food and Agricultural Organisation (FAO)
+Irrigation and drainage paper 56 (Allen et al., 1998). This document provides guidelines for computing crop water requirements using the Penman
+Monteith combination equation. Reference evapotranspiration... Equation
+6 can be written:
+(6.1)
+where... In many situations... For this reason the FAO56 contains a number
+of methods to compute missing variables from... The method for HydroCatchment objects makes an assessment of the variables available and, for
+each input variable, whether it is available or if it needs to be calculated. If
+the latter, a method is chosen following the preferences described in paper
+56.
+
+75
+
+6.6.2 Topmodel
+Topmodel is a semi-distributed hydrological model, originally developed by
+Beven and Kirkby (1979) and described extensively elsewhere (e.g. ), that
+partitions rainfall into overland flow, unsaturated zone recharge and saturated zone flow (?). The R package topmodel () provides a convenient
+wrapper for the original Fortran code. ...To illustrate the procedure of creating... procedure we have defined a subclass HM.topmodel to represent
+Topmodel, as shown in Figure X.
+
+6.6.3 Reservoir operation
+Reservoir operation is a classic problem... Here, we adapt the example of ()
+to the RHydro framework.
+
+6.7 Discussion
+Hydrological modelling and data analysis must increasingly handle large,
+complex data sets. To facilitate workflows... we have designed and implemented a set of classes and methods... The examples show some potential applications of the package. Hydrological science faces a number
+of key challenges around code availability, reproducibility of scientific results... Addressing the challenges in scientific hydrology requires integration
+of information from diverse sources, “is data and computationally intensive"
+and collaboration between researchers across disciplines https://irods.
+org/wp-content/uploads/2015/06/Tarboton-HydroShare.pdf. [...] We
+argue that RHydro should be viewed as a first step towards tackling these
+issues.
+Various solutions have been proposed, including the development of a
+community hydrological model (Weiler and Beven, 2015).
+One of the main goals in science is the exchange of ideas. Mathematical
+equations are used to communicate the structure of theories, computer code
+needs to be communicated to show how these theories were applied (Buy-
+
+76
+
+taert et al., 2008). At best, this is done at a relatively high level language
+that is compact and widely used. An open, free software environment such
+as R provides the means to communicate the latter, efficiently. Teaching how
+we develop, implement, combine, run and verify models is equally served by
+a free environment that offers much functionality and high-level language
+constructs.
+The example use cases for Plynlimon and ... demonstrate the potential of
+RHydro. However, there remains much work to be done in order to realize
+the Model Web for hydrology. First, there needs to be... Cloud computing
+is the use of computer hardware and software delivered as a service over the
+Internet to store, manage and process data (). This enables the efficient
+utilisation of computer infrastructure by multiple users and removes the
+need to install and maintain various software components locally (?). “the
+complexity of most environmental models typically confines them to scientific laboratories and academic computer clusters..." (Buytaert et al., 2012).
+Providing models as web services with accessible user interfaces reduces the
+gap between science and policy makers. Cloud computing will be important
+to ensure community engagement and participation with the development of
+so called “hyper-resolution" models because the computing power required
+for such models will exceed that provided by desktop computers.
+The Model Web, as proposed by Geller and Turner (2007), is a vision for
+a system of interoperable models and data available through the Internet as
+web services. In this vision model inputs could be outputs from other models or they may be observed or measured values received in real time from
+sensors (which may also be considered a model output (Geller and Turner,
+2007; Pebesma et al., 2010; Beven and Cloke, 2012)) or from databases.
+Loosely coupled models interacting through web services has several advantages over tightly coupled models that lack flexibility and often require substantial modification of model source code (?Lu and Piasecki, 2012) (model
+removed from development cycle) The implementation of the Model Web for
+hydrology would facilitate a system “in which modelling methods, databases,
+observations and uncertainty estimation are integrated seamlessly...", such
+as that envisaged by Beven (2007). Furthermore, scientific research carried out using the Model Web would be accessible and fully reproducible
+
+77
+
+(Bastin et al., 2013). The UncertWeb project http://www.uncertweb.org/
+explored how to manage uncertainty in instances of the Model Web (Bastin
+et al., 2013). HydroShare is a collaborative environment for data sharing,
+analysis and modelling currently under development by CUAHSI... It will
+be exposed as a web-service. In many ways the R system may be thought
+of as an implementation of the Model Web without the use of web services,
+because...
+The aim of the current IAHS Scientific Decade (Panta Rhei-Everything
+Flows Montanari et al., 2013) is to improve the predictive capacity of hydrological models for sustainable water resources management in the context
+of rapid environmental and social change. This requires scientific workflows
+that include human-environment interactions (Laniak et al., 2013; Nazemi
+and Wheater, 2015; Wheater and Gober, 2015). Representing complex systems in a single model structure is both challenging and undesirable ().
+Integrated environmental modelling is an approach where several models
+representing... are linked in order to provide a coherent representation of
+a system. In water resources management there is a need for a flexible
+approach to model coupling because of the diverse range of problems encountered (). The lack of a common interface amongst hydrological models...
+Pebesma (2012) highlights a number of areas where the spacetime package could be improved. The RHydro package has provided solutions to
+some o these limitations. For example, it shows how raster classes can be
+represented... It support of the CUAHSI controlled vocabulary... albeit in
+the hydrological sciences only. There remain a number of areas...
+A lack of data means that models are untested across a broad range of
+catchments and... One solution to the lack of data is leveraging the ’Internet
+of things’ to improve monitoring networks (Buytaert et al., 2014).
+Future work on RHydro will focus on identifying use cases and applications to further refine its functionality. Particular focus will be given to
+modelling human-environment interactions through model coupling.
+
+78
+
+6.8 Conclusion
+The main contribution of RHydro [...]
+
+79
+
+7 Conclusion
+TODO
+
+80
+
+Bibliography
+Aldwaik, S. Z. and Pontius, R. G. (2012). Intensity analysis to unify measurements of size and stationarity of land changes by interval, category,
+and transition. Landscape and Urban Planning, 106(1):103–114.
+Allen, R. G., Pereira, L. S., Raes, D., Smith, M., et al. (1998). Crop
+evapotranspiration-Guidelines for computing crop water requirementsFAO irrigation and drainage paper 56. FAO, Rome, 300(9):D05109.
+Bastin, L., Cornford, D., Jones, R., Heuvelink, G. B., Pebesma, E., Stasch,
+C., Nativi, S., Mazzetti, P., and Williams, M. (2013). Managing uncertainty in integrated environmental modelling: The UncertWeb framework.
+Environmental Modelling & Software, 39:116–134.
+Beale, C. M., Lennon, J. J., Yearsley, J. M., Brewer, M. J., and Elston, D. A.
+(2010). Regression analysis of spatial data. Ecology Letters, 13(2):246–264.
+Beven, K. (2006). A manifesto for the equifinality thesis. Journal of Hydrology, 320(1-2):18–36.
+Beven, K. (2007). Towards integrated environmental models of everywhere:
+uncertainty, data and modelling as a learning process. Hydrology and
+Earth System Sciences Discussions, 11(1):460–467.
+Beven, K., Buytaert, W., and Smith, L. A. (2012). On virtual observatories
+and modelled realities (or why discharge must be treated as a virtual
+variable). Hydrological Processes, 26(12):1905–1908.
+Beven, K., Cloke, H., Pappenberger, F., Lamb, R., and Hunter, N. (2015).
+Hyperresolution information and hyperresolution ignorance in modelling
+the hydrology of the land surface. Science China Earth Sciences, 58(1):25–
+35.
+
+81
+
+Beven, K. and Germann, P. (2013). Macropores and water flow in soils
+revisited: REVIEW. Water Resources Research, 49(6):3071–3092.
+Beven, K. and Kirkby, M. (1979). A physically based, variable contributing
+area model of basin hydrology/un modèle à base physique de zone d’appel
+variable de l’hydrologie du bassin versant. Hydrological Sciences Journal,
+24(1):43–69.
+Beven, K., Smith, P. J., and Wood, A. (2011). On the colour and spin of
+epistemic error (and what we might do about it). Hydrology and Earth
+System Sciences, 15(10):3123–3133.
+Beven, K. and Young, P. (2013). A guide to good practice in modeling
+semantics for authors and referees: OPINION. Water Resources Research,
+49(8):5092–5098.
+Beven, K. J. (2001). Dalton medal lecture: How far can we go in distributed
+hydrological modelling? Hydrology and Earth System Sciences, 5(1):1–12.
+Beven, K. J. and Cloke, H. L. (2012). Comment on “Hyperresolution global
+land surface modeling: Meeting a grand challenge for monitoring earth’s
+terrestrial water” by eric f. wood et al. Water Resources Research, 48(1).
+Bivand, R., Keitt, T., and Rowlingson, B. (2014). rgdal: Bindings for the
+Geospatial Data Abstraction Library. R package version 0.8-16.
+Bivand, R. S., Pebesma, E., and Gomez-Rubio, V. (2013). Applied spatial
+data analysis with R, Second edition. Springer, NY.
+Blair, P. and Buytaert, W. (2016). Socio-hydrological modelling: a review
+asking "why, what and how?". Hydrology and Earth System Sciences,
+20(1):443–478.
+Blind, M. and Gregersen, J. B. (2005). Towards an open modelling interface
+(OpenMI) the HarmonIT project. Advances in Geosciences, 4(4):69–74.
+Buytaert, W., Baez, S., Bustamante, M., and Dewulf, A. (2012). Web-Based
+environmental simulation: Bridging the gap between scientific modeling
+and Decision-Making. Environmental Science & Technology, 46(4):1971–
+1976.
+
+82
+
+Buytaert, W. and Beven, K. (2011). Models as multiple working hypotheses:
+hydrological simulation of tropical alpine wetlands. Hydrological Processes,
+25(11):1784–1799.
+Buytaert, W., Reusser, D., Krause, S., and Renaud, J. (2008). Why can’t
+we do better than topmodel? Hydrological Processes, 22(20):4175–4179.
+Buytaert, W., Zulkafli, Z., Grainger, S., Acosta, L., Alemie, T. C., Bastiaensen, J., De BiÃ¨vre, B., Bhusal, J., Clark, J., Dewulf, A., Foggin, M.,
+Hannah, D. M., Hergarten, C., Isaeva, A., Karpouzoglou, T., Pandeya, B.,
+Paudel, D., Sharma, K., Steenhuis, T., Tilahun, S., Van Hecken, G., and
+Zhumanova, M. (2014). Citizen science in hydrology and water resources:
+opportunities for knowledge generation, ecosystem service management,
+and sustainable development. Frontiers in Earth Science, 2.
+Cai, Y., Judd, K. L., and Lontzek, T. S. (2012). Open science is necessary.
+Nature Climate Change, 2(5):299–299.
+Câmara, G., Vinhas, L., Ferreira, K. R., De Queiroz, G. R., De Souza,
+R. C. M., Monteiro, A. M. V., De Carvalho, M. T., Casanova, M. A.,
+and De Freitas, U. M. (2008). Terralib: An open source gis library for
+large-scale environmental and socio-economic applications. In Open source
+approaches in spatial data handling, pages 247–270. Springer.
+Carneiro, T. G. d. S., Andrade, P. R. d., Câmara, G., Monteiro, A. M. V.,
+and Pereira, R. R. (2013).
+
+An extensible toolbox for modeling na-
+
+ture–society interactions. Environmental Modelling & Software, 46:104–
+117.
+Castella, J. and Verburg, P. H. (2007). Combination of process-oriented and
+pattern-oriented models of land-use change in a mountain area of vietnam.
+Ecological Modelling, 202(3-4):410–420.
+Chambers, J. (2008). Software for data analysis: programming with R.
+Springer.
+Chambers, J. M. (1998). Programming with data: A guide to the S language.
+Springer.
+Chambers, J. M. (2000). Users, programmers, and statistical software. Journal of Computational and Graphical Statistics, 9(3):404–422.
+
+83
+
+Claes, M., Mens, T., and Grosjean, P. (2014). On the maintainability of
+CRAN packages. In Software Maintenance, Reengineering and Reverse
+Engineering (CSMR-WCRE), 2014 Software Evolution Week-IEEE Conference on, page 308–312. IEEE.
+Clark, M. P., Fan, Y., Lawrence, D. M., Adam, J. C., Bolster, D., Gochis,
+D. J., Hooper, R. P., Kumar, M., Leung, L. R., Mackay, D. S., Maxwell,
+R. M., Shen, C., Swenson, S. C., and Zeng, X. (2015a). Improving the
+representation of hydrologic processes in earth system models: REPRESENTING HYDROLOGIC PROCESSES IN EARTH SYSTEM MODELS. Water Resources Research, pages n/a–n/a.
+Clark, M. P., Kavetski, D., and Fenicia, F. (2011). Pursuing the method of
+multiple working hypotheses for hydrological modeling: HYPOTHESIS
+TESTING IN HYDROLOGY. Water Resources Research, 47(9):n/a–n/a.
+Clark, M. P., Nijssen, B., Lundquist, J. D., Kavetski, D., Rupp, D. E.,
+Woods, R. A., Freer, J. E., Gutmann, E. D., Wood, A. W., Brekke, L. D.,
+Arnold, J. R., Gochis, D. J., and Rasmussen, R. M. (2015b). A unified
+approach for process-based hydrologic modeling: 1. modeling concept: A
+unified approach for process-based hydrologic modeling. Water Resources
+Research, 51(4):2498–2514.
+Clark, M. P., Nijssen, B., Lundquist, J. D., Kavetski, D., Rupp, D. E.,
+Woods, R. A., Freer, J. E., Gutmann, E. D., Wood, A. W., Gochis,
+D. J., Rasmussen, R. M., Tarboton, D. G., Mahat, V., Flerchinger, G. N.,
+and Marks, D. G. (2015c). A unified approach for process-based hydrologic modeling: 2. model implementation and case studies: A unified approach for process-based hydrologic modeling. Water Resources Research,
+51(4):2515–2542.
+Clark, M. P., Slater, A. G., Rupp, D. E., Woods, R. A., Vrugt, J. A., Gupta,
+H. V., Wagener, T., and Hay, L. E. (2008). Framework for understanding
+structural errors (FUSE): a modular framework to diagnose differences between hydrological models: DIFFERENCES BETWEEN HYDROLOGICAL MODELS. Water Resources Research, 44(12):n/a–n/a.
+Csardi, G. and Nepusz, T. (2006). The igraph software package for complex
+network research. InterJournal, Complex Systems, 1695(5):1–9.
+
+84
+
+Echeverria, C., Coomes, D. A., Hall, M., and Newton, A. C. (2008). Spatially
+explicit models to analyze forest loss and fragmentation between 1976 and
+2020 in southern chile. Ecological Modelling, 212(3-4):439–449.
+Evaristo, J., Jasechko, S., and McDonnell, J. J. (2015). Global separation of plant transpiration from groundwater and streamflow. Nature,
+525(7567):91–94.
+Feddema, J. J. (2005). The importance of Land-Cover change in simulating
+future climates. Science, 310(5754):1674–1678.
+Fiske, I. and Chandler, R. (2011). unmarked: An r package for fitting hierarchical models of wildlife occurrence and abundance. Journal of Statistical
+Software, 43(10):1–23.
+Friedl, M. A., McIver, D. K., Hodges, J. C., Zhang, X. Y., Muchoney, D.,
+Strahler, A. H., Woodcock, C. E., Gopal, S., Schneider, A., Cooper, A.,
+et al. (2002). Global land cover mapping from MODIS: algorithms and
+early results. Remote Sensing of Environment, 83(1):287–302.
+Friedl, M. A., Sulla-Menashe, D., Tan, B., Schneider, A., Ramankutty, N.,
+Sibley, A., and Huang, X. (2010). MODIS collection 5 global land cover:
+Algorithm refinements and characterization of new datasets. Remote Sensing of Environment, 114(1):168–182.
+Fuchs, R., Herold, M., Verburg, P. H., Clevers, J. G., and Eberle, J. (2015).
+Gross changes in reconstructions of historic land cover/use for europe
+between 1900 and 2010. Global Change Biology, 21(1):299–313.
+Fuchs, R., Herold, M., Verburg, P. H., and Clevers, J. G. P. W. (2013). A
+high-resolution and harmonized model approach for reconstructing and
+analysing historic land changes in europe. Biogeosciences, 10(3):1543–
+1559.
+Garcia, M., Portney, K., and Islam, S. (2016). A question driven sociohydrological modeling process. Hydrology and Earth System Sciences,
+20(1):73–92.
+Gebbert, S. and Pebesma, E. (2014). A temporal GIS for field based environmental modeling. Environmental Modelling & Software, 53:1–12.
+
+85
+
+Geller, G. N. and Turner, W. (2007). The model web: a concept for ecological forecasting. In Geoscience and Remote Sensing Symposium, 2007.
+IGARSS 2007. IEEE International, page 2469–2472. IEEE.
+Guo, Z., Dirmeyer, P. A., Koster, R. D., Sud, Y. C., Bonan, G., Oleson,
+K. W., Chan, E., Verseghy, D., Cox, P., Gordon, C. T., et al. (2006).
+GLACE: the global land-atmosphere coupling experiment. part II: analysis. Journal of Hydrometeorology, 7(4):611–625.
+Gupta, T., Jonesb, R., Bastinb, L., and Cornfordb, D. (2012). Integrating OpenMI and UncertWeb: managing uncertainty in OpenMI models.
+In Managing Resources of a Limited Planet: Pathways and Visions under Uncertainty, IEMSS Sixth International Congress on Environmental
+Modelling and Software, page 1–5.
+Hewitt, R., D´ Pacheco, J., and B, M. G. (2013). A cellular automata land
+use model for the r software environment. http://simlander.wordpress.
+com/ [Accessed 11/01/2015].
+Hijmans, R. J. (2014). raster: Geographic data analysis and modeling. R
+package version 2.2-31.
+Hill, C., DeLuca, C., Suarez, M., Da Silva, A., et al. (2004). The architecture of the earth system modeling framework. Computing in Science &
+Engineering, 6(1):18–28.
+Ince, D. C., Hatton, L., and Graham-Cumming, J. (2012). The case for open
+computer programs. Nature, 482(7386):485–488.
+Joppa, L. N., McInerny, G., Harper, R., Salido, L., Takeda, K., O’Hara,
+K., Gavaghan, D., and Emmott, S. (2013). Troubling trends in scientific
+software use. Science, 340(6134):814–815.
+Kampf, S. K. and Burges, S. J. (2007). A framework for classifying and
+comparing distributed hillslope and catchment hydrologic models: DISTRIBUTED MODEL REVIEW. Water Resources Research, 43(5):n/a–
+n/a.
+Keller, C. A., Long, M. S., Yantosca, R. M., Da Silva, A. M., Pawson, S.,
+and Jacob, D. J. (2014). HEMCO v1.0: a versatile, ESMF-compliant
+
+86
+
+component for calculating emissions in atmospheric models. Geoscientific
+Model Development, 7(4):1409–1417.
+Kirchner, J. W. (2006). Getting the right answers for the right reasons: Linking measurements, analyses, and models to advance the science of hydrology: GETTING THE RIGHT ANSWERS FOR THE RIGHT REASONS.
+Water Resources Research, 42(3):n/a–n/a.
+Knutti, R. and Sedláček, J. (2012). Robustness and uncertainties in the new
+CMIP5 climate model projections. Nature Climate Change, 3(4):369–373.
+Koster, R. D., Sud, Y. C., Guo, Z., Dirmeyer, P. A., Bonan, G., Oleson,
+K. W., Chan, E., Verseghy, D., Cox, P., Davies, H., et al. (2006). GLACE:
+the global land-atmosphere coupling experiment. part i: overview. Journal
+of Hydrometeorology, 7(4):590–610.
+Laniak, G. F., Olchin, G., Goodall, J., Voinov, A., Hill, M., Glynn, P.,
+Whelan, G., Geller, G., Quinn, N., Blind, M., Peckham, S., Reaney, S.,
+Gaber, N., Kennedy, R., and Hughes, A. (2013). Integrated environmental
+modeling: A vision and roadmap for the future. Environmental Modelling
+& Software, 39:3–23.
+Liaw, A. and Wiener, M. (2002). Classification and regression by randomForest. R news, 2(3):18–22.
+Lo, M. and Famiglietti, J. S. (2013). Irrigation in california’s central valley strengthens the southwestern U.S. water cycle: CENTRAL VALLEY
+IRRIGATION STRENGTHENS u. s. MONSOON. Geophysical Research
+Letters, 40(2):301–306.
+Loveland, T. R., Reed, B. C., Brown, J. F., Ohlen, D. O., Zhu, Z., Yang,
+L., and Merchant, J. W. (2000). Development of a global land cover
+characteristics database and IGBP DISCover from 1 km AVHRR data.
+International Journal of Remote Sensing, 21(6-7):1303–1330.
+Lu, B. and Piasecki, M. (2012). Community modeling systems: classification and relevance to hydrologic modeling. Journal of Hydroinformatics,
+14(4):840.
+
+87
+
+Madin, J., Bowers, S., Schildhauer, M., Krivov, S., Pennington, D., and
+Villa, F. (2007). An ontology for describing and synthesizing ecological
+observation data. Ecological Informatics, 2(3):279–296.
+Mas, J., Kolb, M., Paegelow, M., Camacho Olmedo, M. T., and Houet, T.
+(2014). Inductive pattern-based land use/cover change models: A comparison of four software packages. Environmental Modelling & Software,
+51:94–111.
+Mascaro, J., Asner, G. P., Knapp, D. E., Kennedy-Bowdoin, T., Martin,
+R. E., Anderson, C., Higgins, M., and Chadwick, K. D. (2014). A tale of
+two “Forests”: random forest machine learning aids tropical forest carbon
+mapping. PLoS ONE, 9(1):e85993.
+MassGIS (2015). Massachusetts geographic information system, massgis.
+McDonnell, J. J., Sivapalan, M., Vaché, K., Dunn, S., Grant, G., Haggerty,
+R., Hinz, C., Hooper, R., Kirchner, J., Roderick, M. L., Selker, J., and
+Weiler, M. (2007). Moving beyond heterogeneity and process complexity: A new vision for watershed hydrology: OPINION. Water Resources
+Research, 43(7):n/a–n/a.
+Montanari, A. and Koutsoyiannis, D. (2012). A blueprint for process-based
+modeling of uncertain hydrological systems: STOCHASTIC PROCESSBASED MODELING. Water Resources Research, 48(9):n/a–n/a.
+Montanari, A., Young, G., Savenije, H., Hughes, D., Wagener, T., Ren,
+L., Koutsoyiannis, D., Cudennec, C., Toth, E., Grimaldi, S., Blöschl, G.,
+Sivapalan, M., Beven, K., Gupta, H., Hipsey, M., Schaefli, B., Arheimer,
+B., Boegh, E., Schymanski, S., Di Baldassarre, G., Yu, B., Hubert, P.,
+Huang, Y., Schumann, A., Post, D., Srinivasan, V., Harman, C., Thompson, S., Rogger, M., Viglione, A., McMillan, H., Characklis, G., Pang, Z.,
+and Belyaev, V. (2013). “Panta Rhei—Everything flows”: Change in hydrology and society—The IAHS scientific decade 2013–2022. Hydrological
+Sciences Journal, 58(6):1256–1275.
+Moreira, E., Costa, S., Aguiar, A. P., Câmara, G., and Carneiro, T. (2009).
+Dynamical coupling of multiscale land change models. Landscape Ecology,
+24(9):1183–1194.
+
+88
+
+Morin, A., Urban, J., Adams, P. D., Foster, I., Sali, A., Baker, D., and Sliz,
+P. (2012). Shining light into black boxes. Science, 336(6078):159–160.
+Moulds, S., Buytaert, W., and Mijic, A. (2015). An open and extensible
+framework for spatially explicit land use change modelling: the lulcc r
+package. Geoscientific Model Development, 8(10):3215–3229.
+Mulia, R., Widayati, A., Suyanto, Agung, P., and Zulkarnain, M. T. (2014).
+Low carbon emission development strategies for jambi, indonesia: simulation and trade-off analysis using the FALLOW model. Mitigation and
+Adaptation Strategies for Global Change, 19(6):773–788.
+Nazemi, A. and Wheater, H. S. (2015). On inclusion of water resource
+management in earth system models &amp;ndash; part 1: Problem definition and representation of water demand. Hydrology and Earth System
+Sciences, 19(1):33–61.
+Niyogi, D., Kishtawal, C., Tripathi, S., and Govindaraju, R. S. (2010). Observational evidence that agricultural intensification and land use change
+may be reducing the indian summer monsoon rainfall: AGRICULTURAL
+INTENSIFICATION AND MONSOON RAINFALL. Water Resources
+Research, 46(3):n/a–n/a.
+Overmars, K., de Koning, G., and Veldkamp, A. (2003). Spatial autocorrelation in multi-scale land use models. Ecological Modelling, 164(2-3):257–
+270.
+Overmars, K. P., Verburg, P. H., and Veldkamp, T. A. (2007). Comparison
+of a deductive and an inductive approach to specify land suitability in a
+spatially explicit land use model. Land Use Policy, 24(3):584–599.
+Pebesma, E. (2012). spacetime: Spatio-temporal data in r. Journal of
+Statistical Software, 51(7):1–30.
+Pebesma, E., Cornford, D., Nativi, S., and Stasch, C. (2010). The uncertainty enabled model web (uncertweb). Environmental Information
+Systems and Services-Infrastructures and Platforms.
+Pebesma, E. J. (2004). Multivariable geostatistics in s: the gstat package.
+Computers & Geosciences, 30(7):683–691.
+
+89
+
+Pebesma, E. J. and Bivand, R. S. (2005). Classes and methods for spatial
+data in R. R News, 5(2):9–13.
+Peng, R. D. (2011). Reproducible research in computational science. Science,
+334(6060):1226–1227.
+Pérez-Vega, A., Mas, J., and Ligmann-Zielinska, A. (2012). Comparing two
+approaches to land use/cover change modeling and their implications for
+the assessment of biodiversity loss in a deciduous tropical forest. Environmental Modelling & Software, 29(1):11–23.
+Petzoldt, T. and Rinke, K. (2007). Simecol: an object-oriented framework
+for ecological modeling in r. Journal of Statistical Software, 22(9):1–31.
+Pitman, A. J., de Noblet-Ducoudré, N., Cruz, F. T., Davin, E. L., Bonan,
+G. B., Brovkin, V., Claussen, M., Delire, C., Ganzeveld, L., Gayler, V.,
+van den Hurk, B. J. J. M., Lawrence, P. J., van der Molen, M. K., Müller,
+C., Reick, C. H., Seneviratne, S. I., Strengers, B. J., and Voldoire, A.
+(2009). Uncertainties in climate responses to past land cover change:
+First results from the LUCID intercomparison study. Geophysical Research
+Letters, 36(14).
+Pontius, R. G., Huffaker, D., and Denman, K. (2004a). Useful techniques of
+validation for spatially explicit land-change models. Ecological Modelling,
+179(4):445–461.
+Pontius, R. G. and Parmentier, B. (2014). Recommendations for using the
+relative operating characteristic (ROC). Landscape Ecology.
+Pontius, R. G., Peethambaram, S., and Castella, J. (2011). Comparison of
+three maps at multiple resolutions: A case study of land change simulation in cho don district, vietnam. Annals of the Association of American
+Geographers, 101(1):45–62.
+Pontius, R. G. and Schneider, L. C. (2001). Land-cover change model validation by an ROC method for the ipswich watershed, massachusetts, USA.
+Agriculture, Ecosystems & Environment, 85(1):239–248.
+Pontius, R. G., Shusas, E., and McEachern, M. (2004b). Detecting important categorical land changes while accounting for persistence. Agriculture,
+Ecosystems & Environment, 101(2-3):251–268.
+
+90
+
+Pontius, R. G. and Spencer, J. (2005). Uncertainty in extrapolations of
+predictive land-change models. Environment and Planning B: Planning
+and Design, 32(2):211–230.
+R Core Team (2015). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria.
+Ray, D. K. and Pijanowski, B. C. (2010). A backcast land use change
+model to generate past land use maps: application and validation at the
+muskegon river watershed of michigan, USA. Journal of Land Use Science,
+5(1):1–29.
+Rodell, M., Velicogna, I., and Famiglietti, J. S. (2009). Satellite-based estimates of groundwater depletion in india. Nature, 460(7258):999–1002.
+Rosa, I. M. D., Ahmed, S. E., and Ewers, R. M. (2014). The transparency,
+reliability and utility of tropical rainforest land-use and land-cover change
+models. Global Change Biology, 20(6):1707–1722.
+Rosa, I. M. D., Purves, D., Souza, C., and Ewers, R. M. (2013). Predictive
+modelling of contagious deforestation in the brazilian amazon. PLoS ONE,
+8(10):e77231.
+Roy, S. S., Mahmood, R., Niyogi, D., Lei, M., Foster, S. A., Hubbard,
+K. G., Douglas, E., and Pielke, R. (2007). Impacts of the agricultural
+green revolution–induced land use changes on air temperatures in india.
+Journal of Geophysical Research, 112(D21).
+Salas, D., Liang, X., and Liang, Y. (2012). A systematic approach for
+hydrological model couplings. International Journal of Communications,
+Network and System Sciences, 05(06):343–352.
+Schaldach, R., Alcamo, J., Koch, J., Kölking, C., Lapola, D. M., Schüngel,
+J., and Priess, J. A. (2011). An integrated approach to modelling landuse change on continental and global scales. Environmental Modelling &
+Software, 26(8):1041–1051.
+Schmitz, O., Karssenberg, D., van Deursen, W., and Wesseling, C. (2009).
+Linking external components to a spatio-temporal modelling framework:
+Coupling MODFLOW and PCRaster. Environmental Modelling & Software, 24(9):1088–1099.
+
+91
+
+Scott, C. A. and Sharma, B. (2009). Energy supply and the expansion of
+groundwater irrigation in the Indus-Ganges basin. International Journal
+of River Basin Management, 7(2):119–124.
+Seneviratne, S. I., Corti, T., Davin, E. L., Hirschi, M., Jaeger, E. B.,
+Lehner, I., Orlowsky, B., and Teuling, A. J. (2010). Investigating soil
+moisture–climate interactions in a changing climate: A review. EarthScience Reviews, 99(3-4):125–161.
+Seneviratne, S. I., Koster, R. D., Guo, Z., Dirmeyer, P. A., Kowalczyk, E.,
+Lawrence, D., Liu, P., Mocko, D., Lu, C., Oleson, K. W., et al. (2006).
+Soil moisture memory in AGCM simulations: Analysis of global landatmosphere coupling experiment (GLACE) data. Journal of Hydrometeorology, 7(5):1090–1112.
+Shadbolt, N., Hall, W., and Berners-Lee, T. (2006). The semantic web
+revisited. Intelligent Systems, IEEE, 21(3):96–101.
+Shah, T., Singh, O. P., and Mukherji, A. (2006). Some aspects of south
+asia’s groundwater irrigation economy: analyses from a survey in india,
+pakistan, nepal terai and bangladesh. Hydrogeology Journal, 14(3):286–
+309.
+Shrestha, P., Sulis, M., Masbou, M., Kollet, S., and Simmer, C. (2014). A
+Scale-Consistent terrestrial systems modeling platform based on COSMO,
+CLM, and ParFlow. Monthly Weather Review, 142(9):3466–3483.
+Singh, R. B. (2000). Environmental consequences of agricultural development: a case study from the green revolution state of haryana, india.
+Agriculture, ecosystems & environment, 82(1):97–103.
+Soares-Filho, B. S., Coutinho Cerqueira, G., and Lopes Pennachin, C.
+(2002). DINAMICA—a stochastic cellular automata model designed to
+simulate the landscape dynamics in an amazonian colonization frontier.
+Ecological modelling, 154(3):217–235.
+Sohl, T. L., Sayler, K. L., Drummond, M. A., and Loveland, T. R. (2007).
+The FORE-SCE model: a practical approach for projecting land cover
+change using scenario-based modeling.
+2(2):103–126.
+
+92
+
+Journal of Land Use Science,
+
+Souty, F., Brunelle, T., Dumas, P., Dorin, B., Ciais, P., Crassous, R.,
+Müller, C., and Bondeau, A. (2012). The nexus Land-Use model version
+1.0, an approach articulating biophysical potentials and economic dynamics to model competition for land-use. Geoscientific Model Development,
+5(5):1297–1322.
+Stehfast, E., van Vuuren, D., Kram, T., Bouwman, L., Alkemade, R.,
+Bakkenes, M., Biemans, H., Bouwman, A., den Elzen, M., Janse, J., Lucas, P., van Minnen, J., Muller, M., and Prins, A. G. (2014). Integrated
+Assessment of Global Environmental Change with IMAGE 3.0 - Model
+description and policy applications. ISBN 978-94-91506-71-0.
+Steiniger, S. and Hunter, A. J. (2013). The 2012 free and open source GIS
+software map – a guide to facilitate research, development, and adoption.
+Computers, Environment and Urban Systems, 39:136–150.
+Tayyebi, A., Pijanowski, B. C., Linderman, M., and Gratton, C. (2014).
+Comparing three global parametric and local non-parametric models to
+simulate land use change in diverse areas of the world. Environmental
+Modelling & Software, 59:202–221.
+Thenkabail, P. S., Schull, M., and Turral, H. (2005). Ganges and indus
+river basin land use/land cover (LULC) and irrigated area mapping using
+continuous streams of MODIS data. Remote Sensing of Environment,
+95(3):317–341.
+Therneau, T., Atkinson, B., and Ripley, B. (2014). rpart: Recursive Partitioning and Regression Trees. R package version 4.1-8.
+Tsarouchi, G. M., Buytaert, W., and Mijic, A. (2014). Coupling a landsurface model with a crop growth model to improve ET flux estimations
+in the upper ganges basin, india. Hydrology and Earth System Sciences,
+18(10):4223–4238.
+Turner, A. G. and Annamalai, H. (2012). Climate change and the south
+asian summer monsoon. Nature Climate Change, 2(8):587–595.
+Valcke, S., Balaji, V., Craig, A., DeLuca, C., Dunlap, R., Ford, R. W.,
+Jacob, R., Larson, J., O’Kuinghttons, R., Riley, G. D., and Vertenstein,
+
+93
+
+M. (2012). Coupling technologies for earth system modelling. Geoscientific
+Model Development, 5(6):1589–1596.
+van Noordwijk, M. (2002). Scaling trade-offs between crop productivity,
+carbon stocks and biodiversity in shifting cultivation landscape mosaics:
+the FALLOW model. Ecological Modelling, 149(1):113–126.
+van Vliet, J., Bregt, A. K., and Hagen-Zanker, A. (2011). Revisiting kappa to
+account for change in the accuracy assessment of land-use change models.
+Ecological Modelling, 222(8):1367–1375.
+Veldkamp, A. and Fresco, L. (1996). CLUE-CR: an integrated multi-scale
+model to simulate land use change scenarios in costa rica. Ecological
+Modelling, 91(1):231–248.
+Veldkamp, A. and Lambin, E. F. (2001). Predicting land-use change. Agriculture, ecosystems & environment, 85(1):1–6.
+Verburg, P. H., De Koning, G. H. J., Kok, K., Veldkamp, A., and Bouma, J.
+(1999). A spatial explicit allocation procedure for modelling the pattern
+of land use change based upon actual land use. Ecological modelling,
+116(1):45–61.
+Verburg, P. H. and Overmars, K. P. (2009). Combining top-down and
+bottom-up dynamics in land use modeling: exploring the future of abandoned farmlands in europe with the Dyna-CLUE model. Landscape Ecology, 24(9):1167–1181.
+Verburg, P. H., Soepboer, W., Veldkamp, A., Limpiada, R., Espaldon, V.,
+and Mastura, S. S. (2002). Modeling the spatial dynamics of regional land
+use: The CLUE-S model. Environmental Management, 30(3):391–405.
+Verburg, P. H., Tabeau, A., and Hatna, E. (2013). Assessing spatial uncertainties of land allocation using a scenario approach and sensitivity
+analysis: A study for land use in europe. Journal of Environmental Management, 127:S132–S144.
+Verburg, P. H. and Veldkamp, A. (2004). Projecting land use transitions at
+forest fringes in the philippines at two spatial scales. Landscape Ecology,
+19(1):77–98.
+
+94
+
+Wassenaar, T., Gerber, P., Verburg, P., Rosales, M., Ibrahim, M., and Steinfeld, H. (2007). Projecting land use changes in the neotropics: The geography of pasture expansion into forest. Global Environmental Change,
+17(1):86–104.
+Weiler, M. and Beven, K. (2015). Do we need a community hydrological
+model? Water Resources Research, pages n/a–n/a.
+Wheater, H. S. and Gober, P. (2015). Water security and the science agenda:
+WATER SECURITY AND THE SCIENCE AGENDA. Water Resources
+Research, 51(7):5406–5424.
+Wilson, G., Aruliah, D. A., Brown, C. T., Chue Hong, N. P., Davis, M.,
+Guy, R. T., Haddock, S. H. D., Huff, K. D., Mitchell, I. M., Plumbley,
+M. D., Waugh, B., White, E. P., and Wilson, P. (2014). Best practices for
+scientific computing. PLoS Biology, 12(1):e1001745.
+Wood, E. F., Roundy, J. K., Troy, T. J., van Beek, L. P. H., Bierkens, M.
+F. P., Blyth, E., de Roo, A., Döll, P., Ek, M., Famiglietti, J., Gochis, D.,
+van de Giesen, N., Houser, P., Jaffé, P. R., Kollet, S., Lehner, B., Lettenmaier, D. P., Peters-Lidard, C., Sivapalan, M., Sheffield, J., Wade, A.,
+and Whitehead, P. (2011). Hyperresolution global land surface modeling:
+Meeting a grand challenge for monitoring earth’s terrestrial water. Water
+Resources Research, 47(5).
+
+95
+
+

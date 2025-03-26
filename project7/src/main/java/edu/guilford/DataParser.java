@@ -5,15 +5,26 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FileParser {
+/**
+ * The {@code DataParser} class is responsible for reading a file and extracting words from it.
+ */
+public class DataParser {
     private String fileName;
 
-    // Constructor that requests a file name
-    public FileParser(String fileName) {
+    /**
+     * Constructs a {@code DataParser} with the specified file name.
+     *
+     * @param fileName the name of the file to be parsed
+     */
+    public DataParser(String fileName) {
         this.fileName = fileName;
     }
 
-    // Method to parse the file and return an ArrayList of words
+    /**
+     * Parses the file and returns an {@code ArrayList} of words found in the file.
+     *
+     * @return an {@code ArrayList} containing words from the file
+     */
     public ArrayList<String> parseFile() {
         ArrayList<String> words = new ArrayList<>();
         try {

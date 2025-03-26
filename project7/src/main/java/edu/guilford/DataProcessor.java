@@ -2,79 +2,94 @@ package edu.guilford;
 
 import java.util.ArrayList;
 
+/**
+ * The {@code DataProcessor} class processes raw string data by cleaning and analyzing it.
+ * It removes punctuation, converts characters to lowercase, filters non-word elements,
+ * sorts the cleaned data, and generates analytics on word frequency.
+ */
 public class DataProcessor {
 
-    // Holds raw string data from parser
-    ArrayList<String> rawData;
+    private ArrayList<String> rawWords; // Holds raw string data
+    private ArrayList<String> cleanedWords; // Holds cleaned and filtered words
+    private ArrayList<DataPoint> wordFrequencyData; // Stores word frequency analytics
 
-    // Holds cleaned string data from parser
-    ArrayList<String> cleanedData;
-
-    // Holds data analytics about the quantity of each string
-    ArrayList<DataPoint> analyticsData;
-
-    public DataProcessor(ArrayList<String> rawData) {
-        this.rawData = rawData;
-        CleanData();
-        analyzeData();
+    /**
+     * Constructs a {@code DataProcessor} with the provided raw word list.
+     *
+     * @param rawWords the list of raw words to be processed
+     */
+    public DataProcessor(ArrayList<String> rawWords) {
+        this.rawWords = rawWords;
+        cleanWords();
+        analyzeWordFrequency();
     }
 
     /**
-     * The CleanData method cleans the strings from the rawData ArrayList by
-     * removing punctuation and spaces, non-words, and numbers. It also sets all
-     * characters to lowercase and sorts the list alphabetically.
+     * Cleans the words in the raw word list by removing punctuation, filtering non-words,
+     * converting to lowercase, and sorting alphabetically.
      */
-    private void CleanData() {
-        cleanedData = new ArrayList<>();
+    private void cleanWords() {
+        cleanedWords = new ArrayList<>();
 
-        for (String rawDataElement : rawData) {
-            StringBuilder cleanDataElement = new StringBuilder();
-            for (char currentChar : rawDataElement.toLowerCase().toCharArray()) {
-                if ((currentChar >= 'a' && currentChar <= 'z')
-                        || (currentChar >= '0' && currentChar <= '9')
-                        || (currentChar == '-')) {
-                    cleanDataElement.append(currentChar);
+        for (String word : rawWords) {
+            StringBuilder cleanedWord = new StringBuilder();
+            for (char character : word.toLowerCase().toCharArray()) {
+                if ((character >= 'a' && character <= 'z') ||
+                    (character >= '0' && character <= '9') ||
+                    (character == '-')) {
+                    cleanedWord.append(character);
                 }
             }
 
-            // If the cleanDataElement contains letters and not just numbers, add to the cleanData ArrayList
-            if (cleanDataElement.toString().matches(".*[a-z].*")) {
-                cleanedData.add(cleanDataElement.toString());
+            // Ensure the cleaned word contains at least one letter before adding
+            if (cleanedWord.toString().matches(".*[a-z].*")) {
+                cleanedWords.add(cleanedWord.toString());
             }
         }
 
-        // Sort data alphabetically
-        cleanedData.sort(String::compareToIgnoreCase);
+        // Sort words alphabetically
+        cleanedWords.sort(String::compareToIgnoreCase);
     }
 
-    private void analyzeData() {
-        analyticsData = new ArrayList<>();
+    /**
+     * Analyzes word frequency by counting occurrences of each cleaned word.
+     * Stores results in {@code wordFrequencyData} sorted by frequency.
+     */
+    private void analyzeWordFrequency() {
+        wordFrequencyData = new ArrayList<>();
 
-        for (String cleanDataElement : cleanedData) {
-            boolean dataPointFound = false;
-            for (DataPoint dataPoint : analyticsData) {
-                if (dataPoint.getStringElement().equals(cleanDataElement)) {
+        for (String word : cleanedWords) {
+            boolean found = false;
+            for (DataPoint dataPoint : wordFrequencyData) {
+                if (dataPoint.getStringElement().equals(word)) {
                     dataPoint.incrementQuantity();
-                    dataPointFound = true;
+                    found = true;
                     break;
                 }
             }
-            if (!dataPointFound) {
-                analyticsData.add(new DataPoint(cleanDataElement));
+            if (!found) {
+                wordFrequencyData.add(new DataPoint(word));
             }
         }
 
-        analyticsData.sort(DataPoint::compareTo);
+        wordFrequencyData.sort(DataPoint::compareTo);
     }
 
-    // Data Getters
-    public ArrayList<String> getCleanedData() {
-        return cleanedData;
+    /**
+     * Retrieves the cleaned words after processing.
+     *
+     * @return a list of cleaned words
+     */
+    public ArrayList<String> getCleanedWords() {
+        return cleanedWords;
     }
 
-    public ArrayList<DataPoint> getAnalyticsData() {
-        return analyticsData;
+    /**
+     * Retrieves the word frequency analytics data.
+     *
+     * @return a list of {@code DataPoint} objects representing word frequency
+     */
+    public ArrayList<DataPoint> getWordFrequencyData() {
+        return wordFrequencyData;
     }
-
-
 }
